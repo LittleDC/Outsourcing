@@ -11,3 +11,30 @@
     padding: 10px 0 0px 0;
     width: 100%;
 }
+
+a:hover {
+    text-decoration: none;
+}
+
+.mine_a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.card-titlw-index {
+    font-size: 1.5rem;
+}
+
+.mine_ul_right li {
+    font-size: 1.1rem;
+}
+
+.mine_ul_right li a {
+    min-height: 3rem;
+}
+
+.mine_ul_right li :hover {
+    /* background-color: rgba(92, 92, 92, 0.507); */
+    background-color: #4d5053;
+    /* border-radius: 0px; */
+}

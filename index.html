@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Dashboard - 人才管理系统 - 微小企业的得力助手.</title>
+  <title>工作台 - 人才管理系统 - 微小企业的得力助手.</title>
   <!-- CSS files -->
   <link href="./dist/css/tabler.min.css" rel="stylesheet" />
   <link href="./dist/css/tabler-flags.min.css" rel="stylesheet" />
@@ -19,6 +19,7 @@
 <body class="antialiased">
   <div class="page">
 
+    <!-- 侧边导航栏 -->
     <aside class="navbar navbar-vertical navbar-expand-lg navbar-dark">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
@@ -26,9 +27,10 @@
         </button>
 
         <h1 class="navbar-brand navbar-brand-autodark">
-          <a href=".">
+
+          <a href="./index.html">
             <img src="./static/logo-white.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image">
-            <!-- 人才管理系统 -->
+            <!-- <h1>人才管理系统</h1> -->
           </a>
         </h1>
         <div class="navbar-nav flex-row d-lg-none">
@@ -55,6 +57,8 @@
           <div class="nav-item dropdown">
             <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown"
               aria-label="Open user menu">
+
+              <!-- 头像 -->
               <span class="avatar avatar-sm" style="background-image: url(./static/avatars/000m.jpg)"></span>
               <div class="d-none d-xl-block ps-2">
                 <div>Paweł Kuna</div>
@@ -72,7 +76,8 @@
           </div>
         </div>
         <div class="collapse navbar-collapse" id="navbar-menu">
-          <ul class="navbar-nav pt-lg-3">
+
+          <ul class="navbar-nav pt-lg-3 mine_ul_right">
             <!-- home/profile -->
             <li class="nav-item">
               <a class="nav-link" href="./index.html">
@@ -93,7 +98,7 @@
 
             <!-- search  HR专属-->
             <li class="nav-item">
-              <a class="nav-link" href="#" role="button" aria-expanded="false">
+              <a class="nav-link" href="./search.html">
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
                     stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -112,7 +117,7 @@
 
             <!-- create  HR专属-->
             <li class="nav-item">
-              <a class="nav-link" href="#">
+              <a class="nav-link" href="./create.html">
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
                     stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -131,7 +136,7 @@
 
             <!-- evaluate HR专属 -->
             <li class="nav-item">
-              <a class="nav-link" href="./users.html">
+              <a class="nav-link" href="./evaluate.html">
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
                     stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -152,7 +157,7 @@
 
             <!-- profile -->
             <li class="nav-item dropdown">
-              <a class="nav-link" href="#navbar-base" data-bs-toggle="dropdown" role="button" aria-expanded="false">
+              <a class="nav-link" href="./profile.html">
                 <span class="nav-link-icon d-md-none d-lg-inline-block">
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
                     stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -184,17 +189,17 @@
       </div>
     </aside>
 
-
+    <!-- 右侧内容区域 -->
     <div class="content new_content">
+
+      <!-- 右侧顶部导航栏nav -->
       <div class="mb-3">
-        <header class="navbar navbar-expand-md navbar-dark d-print-none">
+        <header class="d-none d-lg-block navbar navbar-expand-md navbar-dark d-print-none">
           <div class="container-xl">
-            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
-              <span class="navbar-toggler-icon"></span>
-            </button> -->
+
             <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
-              <a href=".">
-                Dashboard
+              <a href="." class="mine_a">
+                HR端
               </a>
             </h1>
             <div class="navbar-nav flex-row order-md-last">
@@ -212,10 +217,7 @@
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-card">
                   <div class="card">
                     <div class="card-body">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus ad amet consectetur
-                      exercitationem
-                      fugiat in ipsa ipsum, natus odio quidem quod repudiandae sapiente. Amet debitis et magni maxime
-                      necessitatibus ullam.
+                      通知测试
                     </div>
                   </div>
                 </div>
@@ -223,7 +225,9 @@
               <div class="nav-item dropdown">
                 <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown"
                   aria-label="Open user menu">
-                  <span class="avatar avatar-sm" style="background-image: url(./static/avatars/000f.jpg)"></span>
+
+                  <!-- 头像 -->
+                  <span class="avatar avatar-sm" style="background-image: url(./static/avatars/000m.jpg)"></span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                   <a href="#" class="dropdown-item">Set status</a>
@@ -280,24 +284,7 @@
                     </a>
                   </li>
                 </ul>
-                <div
-                  class="ms-md-auto ps-md-4 py-2 py-md-0 me-md-4 order-first order-md-last flex-grow-1 flex-md-grow-0">
-                  <form action="." method="get">
-                    <div class="input-icon">
-                      <span class="input-icon-addon">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
-                          stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
-                          stroke-linejoin="round">
-                          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                          <circle cx="10" cy="10" r="7" />
-                          <line x1="21" y1="21" x2="15" y2="15" />
-                        </svg>
-                      </span>
-                      <input type="text" class="form-control form-control-dark" placeholder="Search…"
-                        aria-label="Search in website">
-                    </div>
-                  </form>
-                </div>
+
               </div>
             </div>
           </div>
@@ -307,54 +294,13 @@
 
       <div class="container-xl">
         <!-- Page title -->
-        <div class="page-header d-print-none">
-          <div class="row align-items-center">
-            <div class="col">
-              <!-- Page pre-title -->
-              <div class="page-pretitle">
-                Overview
-              </div>
-              <h2 class="page-title">
-                Vertical layout
-              </h2>
-            </div>
-            <!-- Page title actions -->
-            <div class="col-auto ms-auto d-print-none">
-              <div class="btn-list">
-                <span class="d-none d-sm-inline">
-                  <a href="#" class="btn btn-white">
-                    New view
-                  </a>
-                </span>
-                <a href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal"
-                  data-bs-target="#modal-report">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
-                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <line x1="12" y1="5" x2="12" y2="19" />
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                  </svg>
-                  创建档案
-                </a>
-                <a href="#" class="btn btn-primary d-sm-none btn-icon" data-bs-toggle="modal"
-                  data-bs-target="#modal-report" aria-label="Create new report">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
-                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <line x1="12" y1="5" x2="12" y2="19" />
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+
 
         <div class="row row-cards">
           <div class="col-12">
             <form action="https://httpbin.org/post" method="POST" class="card">
               <div class="card-header">
-                <h4 class="card-titlw">个人信息</h4>
+                <h4 class="card-titlw card-titlw-index">个人信息</h4>
               </div>
 
               <div class="card-body">
@@ -363,7 +309,7 @@
                     <div class="row">
 
                       <div class="mb-3">
-                        <label class="form-label required">员工姓名</label>
+                        <label class="form-label required">姓名</label>
                         <input type="text" class="form-control" autocomplete="off" />
                       </div>
                       <div class="mb-3">
@@ -403,7 +349,7 @@
                         <input type="email" class="form-control" autocomplete="off" />
                       </div>
                       <div class="mb-3">
-                        <label class="form-label">员工学历</label>
+                        <label class="form-label">学历</label>
                         <input type="tel" class="form-control" autocomplete="off" />
                       </div>
 
@@ -417,32 +363,13 @@
                         <div class="card-body p-4 text-center">
                           <span class="avatar avatar-xl mb-3 avatar-rounded"
                             style="background-image: url(./static/avatars/000m.jpg)"></span>
-                          <h3 class="m-0 mb-1"><a href="#">测试人员</a></h3>
+                          <h3 class="m-0 mb-1"><a href="#">Who Are You？</a></h3>
                           <div class="text-muted">小菜鸡</div>
                           <div class="mt-3">
                             <span class="badge bg-purple-lt">Owner</span>
                           </div>
                         </div>
-                        <div class="d-flex">
-                          <a href="#" class="card-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon me-2 text-muted" width="24" height="24"
-                              viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                              stroke-linecap="round" stroke-linejoin="round">
-                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                              <rect x="3" y="5" width="18" height="14" rx="2" />
-                              <polyline points="3 7 12 13 21 7" />
-                            </svg>
-                            Email</a>
-                          <a href="#" class="card-btn">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon me-2 text-muted" width="24" height="24"
-                              viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                              stroke-linecap="round" stroke-linejoin="round">
-                              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                              <path
-                                d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
-                            </svg>
-                            Call</a>
-                        </div>
+
                       </div>
                     </div>
                   </div>
@@ -454,7 +381,7 @@
 
               <div class="card-footer text-end">
                 <div class="d-flex">
-                  <button type="submit" class="btn btn-primary ms-auto">Send data</button>
+                  <button type="submit" class="btn btn-primary ms-auto">我也不知道要放什么</button>
                 </div>
 
               </div>
@@ -465,151 +392,44 @@
           </div>
         </div>
       </div>
-      <!-- <label class="form-check">
-            <input type="checkbox" class="form-check-input" />
-            <span class="form-check-label required">I agree to the Terms & Conditions</span>
-          </label> -->
 
 
+
+      <footer class="footer footer-transparent d-print-none">
+        <div class="container">
+          <div class="row text-center align-items-center flex-row-reverse">
+            <div class="col-lg-auto ms-lg-auto">
+              <ul class="list-inline list-inline-dots mb-0">
+                <li class="list-inline-item"><a href="#" class="link-secondary">Documentation</a></li>
+                <li class="list-inline-item"><a href="#" class="link-secondary">License</a></li>
+                <li class="list-inline-item"><a href="https://github.com/LittleDC/Outsourcing" target="_blank"
+                    class="link-secondary" rel="noopener">Source
+                    code</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-lg-auto mt-3 mt-lg-0">
+              <ul class="list-inline list-inline-dots mb-0">
+                <li class="list-inline-item">
+                  Copyright &copy; 2021
+                  <a href="#" class="link-secondary">Tabler</a>.
+                  All rights reserved.
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-secondary" rel="noopener">v1.0.0-beta</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
 
     </div>
-    <!-- <footer class="footer footer-transparent d-print-none">
-      <div class="container">
-        <div class="row text-center align-items-center flex-row-reverse">
-          <div class="col-lg-auto ms-lg-auto">
-            <ul class="list-inline list-inline-dots mb-0">
-              <li class="list-inline-item"><a href="./docs/index.html" class="link-secondary">Documentation</a></li>
-              <li class="list-inline-item"><a href="./license.html" class="link-secondary">License</a></li>
-              <li class="list-inline-item"><a href="https://github.com/tabler/tabler" target="_blank"
-                  class="link-secondary" rel="noopener">Source code</a></li>
-            </ul>
-          </div>
-          <div class="col-12 col-lg-auto mt-3 mt-lg-0">
-            <ul class="list-inline list-inline-dots mb-0">
-              <li class="list-inline-item">
-                Copyright &copy; 2021
-                <a href="." class="link-secondary">Tabler</a>.
-                All rights reserved.
-              </li>
-              <li class="list-inline-item">
-                <a href="./changelog.html" class="link-secondary" rel="noopener">v1.0.0-beta</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </footer> -->
+
+
   </div>
   </div>
 
-  <!-- 创建档案 -->
-  <div class="modal modal-blur fade" id="modal-report" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">新档案</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="mb-3">
-            <label class="form-label">员工姓名</label>
-            <input type="text" class="form-control" name="example-text-input" placeholder="员工姓名">
-          </div>
-          <label class="form-label">Report type</label>
-          <div class="form-selectgroup-boxes row mb-3">
-            <div class="col-lg-6">
-              <label class="form-selectgroup-item">
-                <input type="radio" name="report-type" value="1" class="form-selectgroup-input" checked>
-                <span class="form-selectgroup-label d-flex align-items-center p-3">
-                  <span class="me-3">
-                    <span class="form-selectgroup-check"></span>
-                  </span>
-                  <span class="form-selectgroup-label-content">
-                    <span class="form-selectgroup-title strong mb-1">Simple</span>
-                    <span class="d-block text-muted">Provide only basic data needed for the report</span>
-                  </span>
-                </span>
-              </label>
-            </div>
-            <div class="col-lg-6">
-              <label class="form-selectgroup-item">
-                <input type="radio" name="report-type" value="1" class="form-selectgroup-input">
-                <span class="form-selectgroup-label d-flex align-items-center p-3">
-                  <span class="me-3">
-                    <span class="form-selectgroup-check"></span>
-                  </span>
-                  <span class="form-selectgroup-label-content">
-                    <span class="form-selectgroup-title strong mb-1">Advanced</span>
-                    <span class="d-block text-muted">Insert charts and additional advanced analyses to be inserted in
-                      the report</span>
-                  </span>
-                </span>
-              </label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-8">
-              <div class="mb-3">
-                <label class="form-label">Report url</label>
-                <div class="input-group input-group-flat">
-                  <span class="input-group-text">
-                    https://tabler.io/reports/
-                  </span>
-                  <input type="text" class="form-control ps-0" value="report-01" autocomplete="off">
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="mb-3">
-                <label class="form-label">Visibility</label>
-                <select class="form-select">
-                  <option value="1" selected>Private</option>
-                  <option value="2">Public</option>
-                  <option value="3">Hidden</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal-body">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="mb-3">
-                <label class="form-label">Client name</label>
-                <input type="text" class="form-control">
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="mb-3">
-                <label class="form-label">Reporting period</label>
-                <input type="date" class="form-control">
-              </div>
-            </div>
-            <div class="col-lg-12">
-              <div>
-                <label class="form-label">Additional information</label>
-                <textarea class="form-control" rows="3"></textarea>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
-            Cancel
-          </a>
-          <a href="#" class="btn btn-primary ms-auto" data-bs-dismiss="modal">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
-              stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <line x1="12" y1="5" x2="12" y2="19" />
-              <line x1="5" y1="12" x2="19" y2="12" />
-            </svg>
-            Create new report
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+
   <!-- Libs JS -->
   <script src="./dist/libs/apexcharts/dist/apexcharts.min.js"></script>
   <!-- Tabler Core -->
