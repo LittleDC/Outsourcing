@@ -13,7 +13,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Users list - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.</title>
+  <title>工作台 - 人才管理系统 - 微小企业的得力助手.</title>
   <!-- CSS files -->
   <link href="./dist/css/tabler.min.css" rel="stylesheet" />
   <link href="./dist/css/tabler-flags.min.css" rel="stylesheet" />
@@ -79,7 +79,7 @@
               <a href="#" class="dropdown-item">Feedback</a>
               <div class="dropdown-divider"></div>
               <a href="#" class="dropdown-item">Settings</a>
-              <a href="#" class="dropdown-item">Logout</a>
+              <a href="./sign-in.html" class="dropdown-item">Logout</a>
             </div>
           </div>
         </div>
@@ -176,7 +176,7 @@
                   </svg>
                 </span>
                 <span class="nav-link-title">
-                  账号信息
+                  个人信息
                 </span>
               </a>
             </li>
@@ -231,7 +231,7 @@
                   <a href="#" class="dropdown-item">Feedback</a>
                   <div class="dropdown-divider"></div>
                   <a href="#" class="dropdown-item">Settings</a>
-                  <a href="#" class="dropdown-item">Logout</a>
+                  <a href="./sign-in.html" class="dropdown-item">Logout</a>
                 </div>
               </div>
             </div>
@@ -293,41 +293,29 @@
 
         <!-- 内容标题 -->
         <div class="page-header d-print-none">
-          <div class="row align-items-center">
+          <div class="card-header">
             <div class="col">
               <h2 class="page-title">
-                部门员工
+                工作台
               </h2>
-              <div class="text-muted mt-1">1-18 of 400 people</div>
+              <div class="text-muted mt-1">1-12 of 40 people</div>
+
             </div>
             <!-- Page title actions -->
-            <div class="col-auto ms-auto d-print-none">
-              <div class="btn-list">
-
-                <span class="d-none d-sm-inline">
-                  <input type="search" class="form-control d-inline-block w-9 me-3" placeholder="Search user…" />
-                </span>
-
-                <a href="#" class="btn btn-primary d-none d-sm-inline-block" data-bs-toggle="modal"
-                  data-bs-target="#modal-report">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
-                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <line x1="12" y1="5" x2="12" y2="19" />
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                  </svg>
-                  创建档案
-                </a>
-
-                <a href="#" class="btn btn-primary d-sm-none btn-icon" data-bs-toggle="modal"
-                  data-bs-target="#modal-report" aria-label="Create new report">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
-                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <line x1="12" y1="5" x2="12" y2="19" />
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                  </svg>
-                </a>
+            <div class="col">
+              <!-- 搜索框 -->
+              <div class="col-auto ms-auto d-print-none mine_search_index">
+                <div class="input-icon">
+                  <input type="text" class="form-control form-control-rounded" placeholder="Search…">
+                  <span class="input-icon-addon">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                      stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <circle cx="10" cy="10" r="7"></circle>
+                      <line x1="21" y1="21" x2="15" y2="15"></line>
+                    </svg>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -349,8 +337,9 @@
                 </div>
 
               </div>
+
               <div class="d-flex">
-                <a href="#" class="card-btn">
+                <a href="./staff_work.html" class="card-btn">
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
                     stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -359,7 +348,7 @@
                     <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(30 12 9)" />
                   </svg>
                   绩效</a>
-                <a href="#" class="card-btn">
+                <a href="./staff_ID.html" class="card-btn">
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
                     stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -419,22 +408,26 @@
                 </div>
               </div>
               <div class="d-flex">
-                <a href="#" class="card-btn"><svg xmlns="http://www.w3.org/2000/svg" class="icon me-2 text-muted"
-                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
+                <a href="#" class="card-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <rect x="3" y="5" width="18" height="14" rx="2" />
-                    <polyline points="3 7 12 13 21 7" />
+                    <circle cx="12" cy="9" r="6" />
+                    <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(-30 12 9)" />
+                    <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(30 12 9)" />
                   </svg>
-                  Email</a>
-                <a href="#" class="card-btn"><svg xmlns="http://www.w3.org/2000/svg" class="icon me-2 text-muted"
-                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
+                  绩效</a>
+                <a href="#" class="card-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M11 17a2.5 2.5 0 0 0 2 0" />
                     <path
-                      d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                      d="M12 3c-4.664 0 -7.396 2.331 -7.862 5.595a11.816 11.816 0 0 0 2 8.592a10.777 10.777 0 0 0 3.199 3.064c1.666 1 3.664 1 5.33 0a10.777 10.777 0 0 0 3.199 -3.064a11.89 11.89 0 0 0 2 -8.592c-.466 -3.265 -3.198 -5.595 -7.862 -5.595z" />
+                    <line x1="8" y1="11" x2="10" y2="13" />
+                    <line x1="16" y1="11" x2="14" y2="13" />
                   </svg>
-                  Call</a>
+                  信息</a>
               </div>
             </div>
           </div>
@@ -449,23 +442,28 @@
                   <span class="badge bg-green-lt">良好</span>
                 </div>
               </div>
+
               <div class="d-flex">
-                <a href="#" class="card-btn"><svg xmlns="http://www.w3.org/2000/svg" class="icon me-2 text-muted"
-                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
+                <a href="#" class="card-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <rect x="3" y="5" width="18" height="14" rx="2" />
-                    <polyline points="3 7 12 13 21 7" />
+                    <circle cx="12" cy="9" r="6" />
+                    <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(-30 12 9)" />
+                    <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(30 12 9)" />
                   </svg>
-                  Email</a>
-                <a href="#" class="card-btn"><svg xmlns="http://www.w3.org/2000/svg" class="icon me-2 text-muted"
-                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
+                  绩效</a>
+                <a href="#" class="card-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M11 17a2.5 2.5 0 0 0 2 0" />
                     <path
-                      d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                      d="M12 3c-4.664 0 -7.396 2.331 -7.862 5.595a11.816 11.816 0 0 0 2 8.592a10.777 10.777 0 0 0 3.199 3.064c1.666 1 3.664 1 5.33 0a10.777 10.777 0 0 0 3.199 -3.064a11.89 11.89 0 0 0 2 -8.592c-.466 -3.265 -3.198 -5.595 -7.862 -5.595z" />
+                    <line x1="8" y1="11" x2="10" y2="13" />
+                    <line x1="16" y1="11" x2="14" y2="13" />
                   </svg>
-                  Call</a>
+                  信息</a>
               </div>
             </div>
           </div>
@@ -480,22 +478,26 @@
                 </div>
               </div>
               <div class="d-flex">
-                <a href="#" class="card-btn"><svg xmlns="http://www.w3.org/2000/svg" class="icon me-2 text-muted"
-                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
+                <a href="#" class="card-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <rect x="3" y="5" width="18" height="14" rx="2" />
-                    <polyline points="3 7 12 13 21 7" />
+                    <circle cx="12" cy="9" r="6" />
+                    <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(-30 12 9)" />
+                    <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(30 12 9)" />
                   </svg>
-                  Email</a>
-                <a href="#" class="card-btn"><svg xmlns="http://www.w3.org/2000/svg" class="icon me-2 text-muted"
-                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
+                  绩效</a>
+                <a href="#" class="card-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M11 17a2.5 2.5 0 0 0 2 0" />
                     <path
-                      d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                      d="M12 3c-4.664 0 -7.396 2.331 -7.862 5.595a11.816 11.816 0 0 0 2 8.592a10.777 10.777 0 0 0 3.199 3.064c1.666 1 3.664 1 5.33 0a10.777 10.777 0 0 0 3.199 -3.064a11.89 11.89 0 0 0 2 -8.592c-.466 -3.265 -3.198 -5.595 -7.862 -5.595z" />
+                    <line x1="8" y1="11" x2="10" y2="13" />
+                    <line x1="16" y1="11" x2="14" y2="13" />
                   </svg>
-                  Call</a>
+                  信息</a>
               </div>
             </div>
           </div>
@@ -510,22 +512,26 @@
                 </div>
               </div>
               <div class="d-flex">
-                <a href="#" class="card-btn"><svg xmlns="http://www.w3.org/2000/svg" class="icon me-2 text-muted"
-                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
+                <a href="#" class="card-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <rect x="3" y="5" width="18" height="14" rx="2" />
-                    <polyline points="3 7 12 13 21 7" />
+                    <circle cx="12" cy="9" r="6" />
+                    <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(-30 12 9)" />
+                    <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(30 12 9)" />
                   </svg>
-                  Email</a>
-                <a href="#" class="card-btn"><svg xmlns="http://www.w3.org/2000/svg" class="icon me-2 text-muted"
-                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
+                  绩效</a>
+                <a href="#" class="card-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M11 17a2.5 2.5 0 0 0 2 0" />
                     <path
-                      d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                      d="M12 3c-4.664 0 -7.396 2.331 -7.862 5.595a11.816 11.816 0 0 0 2 8.592a10.777 10.777 0 0 0 3.199 3.064c1.666 1 3.664 1 5.33 0a10.777 10.777 0 0 0 3.199 -3.064a11.89 11.89 0 0 0 2 -8.592c-.466 -3.265 -3.198 -5.595 -7.862 -5.595z" />
+                    <line x1="8" y1="11" x2="10" y2="13" />
+                    <line x1="16" y1="11" x2="14" y2="13" />
                   </svg>
-                  Call</a>
+                  信息</a>
               </div>
             </div>
           </div>
@@ -539,22 +545,26 @@
                 </div>
               </div>
               <div class="d-flex">
-                <a href="#" class="card-btn"><svg xmlns="http://www.w3.org/2000/svg" class="icon me-2 text-muted"
-                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
+                <a href="#" class="card-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <rect x="3" y="5" width="18" height="14" rx="2" />
-                    <polyline points="3 7 12 13 21 7" />
+                    <circle cx="12" cy="9" r="6" />
+                    <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(-30 12 9)" />
+                    <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(30 12 9)" />
                   </svg>
-                  Email</a>
-                <a href="#" class="card-btn"><svg xmlns="http://www.w3.org/2000/svg" class="icon me-2 text-muted"
-                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
+                  绩效</a>
+                <a href="#" class="card-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M11 17a2.5 2.5 0 0 0 2 0" />
                     <path
-                      d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                      d="M12 3c-4.664 0 -7.396 2.331 -7.862 5.595a11.816 11.816 0 0 0 2 8.592a10.777 10.777 0 0 0 3.199 3.064c1.666 1 3.664 1 5.33 0a10.777 10.777 0 0 0 3.199 -3.064a11.89 11.89 0 0 0 2 -8.592c-.466 -3.265 -3.198 -5.595 -7.862 -5.595z" />
+                    <line x1="8" y1="11" x2="10" y2="13" />
+                    <line x1="16" y1="11" x2="14" y2="13" />
                   </svg>
-                  Call</a>
+                  信息</a>
               </div>
             </div>
           </div>
@@ -569,22 +579,26 @@
                 </div>
               </div>
               <div class="d-flex">
-                <a href="#" class="card-btn"><svg xmlns="http://www.w3.org/2000/svg" class="icon me-2 text-muted"
-                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
+                <a href="#" class="card-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <rect x="3" y="5" width="18" height="14" rx="2" />
-                    <polyline points="3 7 12 13 21 7" />
+                    <circle cx="12" cy="9" r="6" />
+                    <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(-30 12 9)" />
+                    <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(30 12 9)" />
                   </svg>
-                  Email</a>
-                <a href="#" class="card-btn"><svg xmlns="http://www.w3.org/2000/svg" class="icon me-2 text-muted"
-                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
+                  绩效</a>
+                <a href="#" class="card-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M11 17a2.5 2.5 0 0 0 2 0" />
                     <path
-                      d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                      d="M12 3c-4.664 0 -7.396 2.331 -7.862 5.595a11.816 11.816 0 0 0 2 8.592a10.777 10.777 0 0 0 3.199 3.064c1.666 1 3.664 1 5.33 0a10.777 10.777 0 0 0 3.199 -3.064a11.89 11.89 0 0 0 2 -8.592c-.466 -3.265 -3.198 -5.595 -7.862 -5.595z" />
+                    <line x1="8" y1="11" x2="10" y2="13" />
+                    <line x1="16" y1="11" x2="14" y2="13" />
                   </svg>
-                  Call</a>
+                  信息</a>
               </div>
             </div>
           </div>
@@ -599,22 +613,26 @@
                 </div>
               </div>
               <div class="d-flex">
-                <a href="#" class="card-btn"><svg xmlns="http://www.w3.org/2000/svg" class="icon me-2 text-muted"
-                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
+                <a href="#" class="card-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <rect x="3" y="5" width="18" height="14" rx="2" />
-                    <polyline points="3 7 12 13 21 7" />
+                    <circle cx="12" cy="9" r="6" />
+                    <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(-30 12 9)" />
+                    <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(30 12 9)" />
                   </svg>
-                  Email</a>
-                <a href="#" class="card-btn"><svg xmlns="http://www.w3.org/2000/svg" class="icon me-2 text-muted"
-                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
+                  绩效</a>
+                <a href="#" class="card-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M11 17a2.5 2.5 0 0 0 2 0" />
                     <path
-                      d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                      d="M12 3c-4.664 0 -7.396 2.331 -7.862 5.595a11.816 11.816 0 0 0 2 8.592a10.777 10.777 0 0 0 3.199 3.064c1.666 1 3.664 1 5.33 0a10.777 10.777 0 0 0 3.199 -3.064a11.89 11.89 0 0 0 2 -8.592c-.466 -3.265 -3.198 -5.595 -7.862 -5.595z" />
+                    <line x1="8" y1="11" x2="10" y2="13" />
+                    <line x1="16" y1="11" x2="14" y2="13" />
                   </svg>
-                  Call</a>
+                  信息</a>
               </div>
             </div>
           </div>
@@ -628,22 +646,26 @@
                 </div>
               </div>
               <div class="d-flex">
-                <a href="#" class="card-btn"><svg xmlns="http://www.w3.org/2000/svg" class="icon me-2 text-muted"
-                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
+                <a href="#" class="card-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                    <rect x="3" y="5" width="18" height="14" rx="2" />
-                    <polyline points="3 7 12 13 21 7" />
+                    <circle cx="12" cy="9" r="6" />
+                    <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(-30 12 9)" />
+                    <polyline points="9 14.2 9 21 12 19 15 21 15 14.2" transform="rotate(30 12 9)" />
                   </svg>
-                  Email</a>
-                <a href="#" class="card-btn"><svg xmlns="http://www.w3.org/2000/svg" class="icon me-2 text-muted"
-                    width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                    stroke-linecap="round" stroke-linejoin="round">
+                  绩效</a>
+                <a href="#" class="card-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M11 17a2.5 2.5 0 0 0 2 0" />
                     <path
-                      d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                      d="M12 3c-4.664 0 -7.396 2.331 -7.862 5.595a11.816 11.816 0 0 0 2 8.592a10.777 10.777 0 0 0 3.199 3.064c1.666 1 3.664 1 5.33 0a10.777 10.777 0 0 0 3.199 -3.064a11.89 11.89 0 0 0 2 -8.592c-.466 -3.265 -3.198 -5.595 -7.862 -5.595z" />
+                    <line x1="8" y1="11" x2="10" y2="13" />
+                    <line x1="16" y1="11" x2="14" y2="13" />
                   </svg>
-                  Call</a>
+                  信息</a>
               </div>
             </div>
           </div>

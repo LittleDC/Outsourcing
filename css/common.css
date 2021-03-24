@@ -41,5 +41,14 @@ a:hover {
 
 .mine_search {
     max-width: 600px;
-    margin-bottom: 0 !important;
+    /* margin-bottom: 0 !important; */
+}
+
+.mine_back {
+    float: left;
+}
+
+.mine_work {
+    float: right;
+
 }

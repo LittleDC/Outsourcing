@@ -6,7 +6,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>工作台 - 人才管理系统 - 微小企业的得力助手.</title>
+  <title>查询 - 人才管理系统 - 微小企业的得力助手.</title>
   <!-- CSS files -->
   <link href="./dist/css/tabler.min.css" rel="stylesheet" />
   <link href="./dist/css/tabler-flags.min.css" rel="stylesheet" />
@@ -71,7 +71,7 @@
               <a href="#" class="dropdown-item">Feedback</a>
               <div class="dropdown-divider"></div>
               <a href="#" class="dropdown-item">Settings</a>
-              <a href="#" class="dropdown-item">Logout</a>
+              <a href="./sign-in.html" class="dropdown-item">Logout</a>
             </div>
           </div>
         </div>
@@ -168,7 +168,7 @@
                   </svg>
                 </span>
                 <span class="nav-link-title">
-                  账号信息
+                  个人信息
                 </span>
               </a>
             </li>
@@ -223,7 +223,7 @@
                   <a href="#" class="dropdown-item">Feedback</a>
                   <div class="dropdown-divider"></div>
                   <a href="#" class="dropdown-item">Settings</a>
-                  <a href="#" class="dropdown-item">Logout</a>
+                  <a href="./sign-in.html" class="dropdown-item">Logout</a>
                 </div>
               </div>
             </div>
@@ -284,8 +284,12 @@
 
 
         <form action="https://httpbin.org/post" method="post" class="card">
-          <!-- 搜索框 -->
+          <div class="card-header">
+            <h4 class="card-titlw card-titlw-index">查询</h4>
+          </div>
+
           <div class="card-body">
+            <!-- 搜索框 -->
             <div class="input-icon mb-3 mine_search">
               <input type="text" class="form-control" placeholder="请输入手机号查询...">
               <span class="input-icon-addon">
@@ -297,132 +301,152 @@
                 </svg>
               </span>
             </div>
-          </div>
 
-
-          <div class="col-12">
-            <div class="card">
-              <div class="table-responsive">
-                <table class="table table-vcenter card-table">
-                  <thead>
-                    <tr>
-                      <th>姓名</th>
-                      <th>Title</th>
-                      <th>Role</th>
-                      <th class="w-1"></th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>
-                        <div class="d-flex py-1 align-items-center">
-                          <span class="avatar me-2" style="background-image: url(./static/avatars/006m.jpg)"></span>
-                          <div class="flex-fill">
-                            <div class="font-weight-medium">Lorry Mion</div>
-                            <div class="text-muted"><a href="#" class="text-reset">lmiona@livejournal.com</a></div>
+            <div class="col-12">
+              <div class="card">
+                <div class="table-responsive">
+                  <table class="table table-vcenter table-mobile-md card-table">
+                    <thead>
+                      <tr>
+                        <th>姓名</th>
+                        <th>公司</th>
+                        <th>职位</th>
+                        <th class="w-1"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td data-label="Name">
+                          <div class="d-flex py-1 align-items-center">
+                            <span class="avatar me-2" style="background-image: url(./static/avatars/010m.jpg)"></span>
+                            <div class="flex-fill">
+                              <div class="font-weight-medium">小菜鸡</div>
+                              <div class="text-muted"><a href="#" class="text-reset">123@gmail.com</a></div>
+                            </div>
                           </div>
-                        </div>
-                      </td>
-                      <td>
-                        <div>Automation Specialist IV</div>
-                        <div class="text-muted">Accounting</div>
-                      </td>
-                      <td class="text-muted">
-                        User
-                      </td>
-                      <td>
-                        <a href="#">Edit</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex py-1 align-items-center">
-                          <span class="avatar me-2" style="background-image: url(./static/avatars/004f.jpg)"></span>
-                          <div class="flex-fill">
-                            <div class="font-weight-medium">Leesa Beaty</div>
-                            <div class="text-muted"><a href="#" class="text-reset">lbeatyb@alibaba.com</a></div>
+                        </td>
+                        <td data-label="Title">
+                          <div>随便啥公司</div>
+                        </td>
+                        <td class="text-muted" data-label="Role">
+                          User
+                        </td>
+                        <td>
+                          <div class="btn-list flex-nowrap" style="float: right;">
+                            <a href="#" class="btn btn-white" data-bs-toggle="modal" data-bs-target="#modal-danger">
+                              详情
+                            </a>
                           </div>
-                        </div>
-                      </td>
-                      <td>
-                        <div>Editor</div>
-                        <div class="text-muted">Services</div>
-                      </td>
-                      <td class="text-muted">
-                        Admin
-                      </td>
-                      <td>
-                        <a href="#">Edit</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex py-1 align-items-center">
-                          <span class="avatar me-2" style="background-image: url(./static/avatars/007m.jpg)"></span>
-                          <div class="flex-fill">
-                            <div class="font-weight-medium">Perren Keemar</div>
-                            <div class="text-muted"><a href="#" class="text-reset">pkeemarc@yahoo.com</a></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Name">
+                          <div class="d-flex py-1 align-items-center">
+                            <span class="avatar me-2" style="background-image: url(./static/avatars/005f.jpg)"></span>
+                            <div class="flex-fill">
+                              <div class="font-weight-medium">Dyann Escala</div>
+                              <div class="text-muted"><a href="#" class="text-reset">descalag@usatoday.com</a></div>
+                            </div>
                           </div>
-                        </div>
-                      </td>
-                      <td>
-                        <div>Analog Circuit Design manager</div>
-                        <div class="text-muted">Services</div>
-                      </td>
-                      <td class="text-muted">
-                        User
-                      </td>
-                      <td>
-                        <a href="#">Edit</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex py-1 align-items-center">
-                          <span class="avatar me-2">SA</span>
-                          <div class="flex-fill">
-                            <div class="font-weight-medium">Sunny Airey</div>
-                            <div class="text-muted"><a href="#" class="text-reset">saireyd@prlog.org</a></div>
+                        </td>
+                        <td data-label="Title">
+                          <div>Mechanical Systems Engineer</div>
+                          <div class="text-muted">Sales</div>
+                        </td>
+                        <td class="text-muted" data-label="Role">
+                          Admin
+                        </td>
+                        <td>
+                          <div class="btn-list flex-nowrap" style="float: right;">
+                            <a href="#" class="btn btn-white" data-bs-toggle="modal" data-bs-target="#modal-danger">
+                              详情
+                            </a>
                           </div>
-                        </div>
-                      </td>
-                      <td>
-                        <div>Nuclear Power Engineer</div>
-                        <div class="text-muted">Engineering</div>
-                      </td>
-                      <td class="text-muted">
-                        Owner
-                      </td>
-                      <td>
-                        <a href="#">Edit</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex py-1 align-items-center">
-                          <span class="avatar me-2" style="background-image: url(./static/avatars/009m.jpg)"></span>
-                          <div class="flex-fill">
-                            <div class="font-weight-medium">Geoffry Flaunders</div>
-                            <div class="text-muted"><a href="#" class="text-reset">gflaunderse@loc.gov</a></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Name">
+                          <div class="d-flex py-1 align-items-center">
+                            <span class="avatar me-2" style="background-image: url(./static/avatars/006f.jpg)"></span>
+                            <div class="flex-fill">
+                              <div class="font-weight-medium">Avivah Mugleston</div>
+                              <div class="text-muted"><a href="#" class="text-reset">amuglestonh@intel.com</a></div>
+                            </div>
                           </div>
-                        </div>
-                      </td>
-                      <td>
-                        <div>Software Test Engineer II</div>
-                        <div class="text-muted">Accounting</div>
-                      </td>
-                      <td class="text-muted">
-                        Admin
-                      </td>
-                      <td>
-                        <a href="#">Edit</a>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                        </td>
+                        <td data-label="Title">
+                          <div>Actuary</div>
+                          <div class="text-muted">Sales</div>
+                        </td>
+                        <td class="text-muted" data-label="Role">
+                          User
+                        </td>
+                        <td>
+                          <div class="btn-list flex-nowrap" style="float: right;">
+                            <a href="#" class="btn btn-white">
+                              详情
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Name">
+                          <div class="d-flex py-1 align-items-center">
+                            <span class="avatar me-2">AA</span>
+                            <div class="flex-fill">
+                              <div class="font-weight-medium">Arlie Armstead</div>
+                              <div class="text-muted"><a href="#" class="text-reset">aarmsteadi@yellowpages.com</a>
+                              </div>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Title">
+                          <div>VP Quality Control</div>
+                          <div class="text-muted">Accounting</div>
+                        </td>
+                        <td class="text-muted" data-label="Role">
+                          Owner
+                        </td>
+                        <td>
+                          <div class="btn-list flex-nowrap" style="float: right;">
+                            <a href="#" class="btn btn-white">
+                              详情
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td data-label="Name">
+                          <div class="d-flex py-1 align-items-center">
+                            <span class="avatar me-2" style="background-image: url(./static/avatars/008f.jpg)"></span>
+                            <div class="flex-fill">
+                              <div class="font-weight-medium">Tessie Curzon</div>
+                              <div class="text-muted"><a href="#" class="text-reset">tcurzonj@hp.com</a></div>
+                            </div>
+                          </div>
+                        </td>
+                        <td data-label="Title">
+                          <div>Research Nurse</div>
+                          <div class="text-muted">Product Management</div>
+                        </td>
+                        <td class="text-muted" data-label="Role">
+                          Admin
+                        </td>
+                        <td>
+                          <div class="btn-list flex-nowrap" style="float: right;">
+                            <a href="#" class="btn btn-white">
+                              详情
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
+
 
         </form>
       </div>
@@ -458,6 +482,39 @@
     </div>
 
   </div>
+
+  <div class="modal modal-blur fade" id="modal-danger" tabindex="-1" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-sm modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-status bg-danger"></div>
+        <div class="modal-body text-center py-4">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon mb-2 text-danger icon-lg" width="24" height="24"
+            viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 9v2m0 4v.01"></path>
+            <path d="M5 19h14a2 2 0 0 0 1.84 -2.75l-7.1 -12.25a2 2 0 0 0 -3.5 0l-7.1 12.25a2 2 0 0 0 1.75 2.75"></path>
+          </svg>
+          <h3>发送验证码？</h3>
+          <div class="text-muted">详细信息需要获得用户同意，请明确查询是否正确</div>
+        </div>
+        <div class="modal-footer">
+          <div class="w-100">
+            <div class="row">
+              <div class="col"><a href="#" class="btn btn-white w-100" data-bs-dismiss="modal">
+                  取消
+                </a></div>
+              <div class="col"><a href="#" class="btn btn-danger w-100" data-bs-dismiss="modal">
+                  确定
+                </a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   </div>
 
 
