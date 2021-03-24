@@ -38,3 +38,8 @@ a:hover {
     background-color: #4d5053;
     /* border-radius: 0px; */
 }
+
+.mine_search {
+    max-width: 600px;
+    margin-bottom: 0 !important;
+}
