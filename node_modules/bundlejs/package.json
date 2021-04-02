@@ -1,0 +1,12 @@
+{
+    "name": "bundlejs"
+  , "description": "simplistic tool for bundling javascripts and css files"
+  , "version": "0.0.1"
+  , "keywords": ["js", "bundle", "pack", "package"]
+  , "author": "torgeir thoresen <@torgeir>"
+  , "dependencies": { "uglify-js": "1.2.x", "debug": "0.1.x" }
+  , "devDependencies": { "buster": "0.3.x" }
+  , "scripts": { "test": "make test" }
+  , "engines": { "node": "0.6.x" }
+  , "main": "index"
+}

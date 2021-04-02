@@ -1,5 +1,9 @@
 {
   "dependencies": {
-    "jquery": "^3.6.0"
+    "bundle": "^2.1.0",
+    "bundlejs": "^0.0.1",
+    "jquery": "^3.6.0",
+    "mockjs": "^1.1.0",
+    "require": "^2.4.20"
   }
 }

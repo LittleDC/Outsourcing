@@ -1,37 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <script>
-        function showHint(str) {
-            var xmlhttp;
-            if (str.length == 0) {
-                document.getElementById("txtHint").innerHTML = "";
-                return;
-            }
-            // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
-            xmlhttp = new XMLHttpRequest();
-
-            xmlhttp.onreadystatechange = function () {
-                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-                    document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
-                }
-            }
-            xmlhttp.open("GET", "http://www.runoob.com/try/ajax/gethint.php?q=" + str, true);
-            xmlhttp.send();
-        }
-    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/Mock.js/1.0.0/mock.js"></script>
 </head>
 
 <body>
 
-    <h3>在输入框中尝试输入字母 a:</h3>
-    <form action="" method="">
-        输入姓名: <input type="text" id="txt1" onkeyup="showHint(this.value)" />
-    </form>
-    <p>提示信息: <span id="txtHint"></span></p>
+    <div id="json"></div>
 
+
+    <script src="./mockjs/test_mock.js"></script>
+    <script type="text/javascript">
+        var json_mine = document.querySelector('#json')
+        const formData = new FormData()
+        formData.append('AccountPhone', '13777123456')
+        formData.append('Password', '123456')
+        // console.log(formData);
+        jQuery.ajax({
+            type: "POST",
+            processData: false,
+            contentType: false,
+            url: "/user/userinfo",
+            data: formData,
+            dataType: 'json',
+
+            success: function (data) {
+                console.log(data);
+                alert(data.msg)
+
+                localStorage.setItem('token', data.data.token)
+
+            }
+        })
+
+    </script>
 </body>
 
 </html>

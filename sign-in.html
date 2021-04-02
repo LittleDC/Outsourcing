@@ -103,13 +103,18 @@
         url: "http://101.200.144.61:8080/login",
         data: formData,
         success: function (data) {
+          if (data.status == 1) {
+            localStorage.setItem('token', data.data)
+            location.href = './index.html'
+          } else {
+            alert(data.msg)
+          }
+        },
+        error: function (data) {
           alert(data.msg)
-          localStorage.setItem('token', data.data)
-          location.href = './index.html'
-        }
-        // error: function (data) {
 
-        // }
+          // alert('登录错误，请重新检查信息')
+        }
       })
     })
 

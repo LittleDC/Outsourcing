@@ -14,30 +14,32 @@
     this is my jsp
     <br>
     <div id="json"></div>
-</body>
 
-<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
-<script type="text/javascript">
-    var json_mine = document.querySelector('#json')
-    const formData = new FormData()
-    formData.append('AccountPhone', '13777123456')
-    formData.append('Password', '123456')
+
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+    <script type="text/javascript">
+        var json_mine = document.querySelector('#json')
+        const formData = new FormData()
+        formData.append('AccountPhone', '13777123456')
+        formData.append('Password', '123456')
     // console.log(formData);
-    jQuery.ajax({
-        type: "POST",
-        processData: false,
-        contentType: false,
-        url: "http://101.200.144.61:8080/login",
-        data: formData,
-        success: function (data) {//{,,,}
-            // $("#json").html(data.msg, data.status, data.data);
-            console.log(data);
-            alert(data.msg)
+    // jQuery.ajax({
+    //     type: "POST",
+    //     processData: false,
+    //     contentType: false,
+    //     url: "http://101.200.144.61:8080/login",
+    //     data: formData,
+    //     success: function (data) {
+    //         console.log(data);
+    //         alert(data.msg)
 
-            localStorage.setItem('token', data.data)
+    //         localStorage.setItem('token', data.data)
 
-        }
-    })
-</script>
+    //     }
+    // })
+    // 配置 Mock 路径
+
+    </script>
+</body>
 
 </html>
