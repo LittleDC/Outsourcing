@@ -46,9 +46,19 @@ a:hover {
 
 .mine_back {
     float: left;
+    width: 30%;
 }
 
 .mine_work {
     float: right;
 
+}
+
+.mine_table {
+    padding-right: 2rem !important;
+}
+
+.mine_title {
+    font-size: 1.5rem;
+    font-weight: 700;
 }

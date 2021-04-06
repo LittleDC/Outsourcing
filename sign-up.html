@@ -115,34 +115,34 @@
 
       // console.log(formData.get('AccountPhone'));
 
-      // $.ajax({
-      //   type: "POST",
-      //   processData: false,
-      //   contentType: false,
-      //   url: "http://101.200.144.61:8080/login",
-      //   data: formData,
-      //   success: function (data) {
-      //     if (data.status == 1) {
-      //       alert(data.msg + ',请登录')
-      //       location.href = "./login.html"
-      //     } else {
-      //       alert(data.msg)
-      //     }
-      //   },
-      //   error: function (data) {
-      //     alert('注册失败')
-      //   }
-      // })
-
       $.ajax({
-        url: '/register/1906672', // 自动拦截
-        method: 'POST',
-        dataType: 'JSON',
+        type: "POST",
+        processData: false,
+        contentType: false,
+        url: "http://101.200.144.61:8080/register",
+        data: formData,
         success: function (data) {
-          // 返回根据RAP文档及规则生成的mock数据
-          $('#result').html(JSON.stringify(data))
+          if (data.status == 1) {
+            alert(data.msg + ',请登录')
+            location.href = "./sign-in.html"
+          } else {
+            alert(data.msg)
+          }
+        },
+        error: function (data) {
+          alert('注册失败')
         }
       })
+
+      // $.ajax({
+      //   url: '/register/1906672', // 自动拦截
+      //   method: 'POST',
+      //   dataType: 'JSON',
+      //   success: function (data) {
+      //     // 返回根据RAP文档及规则生成的mock数据
+      //     $('#result').html(JSON.stringify(data))
+      //   }
+      // })
     })
 
   </script>
