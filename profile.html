@@ -240,7 +240,7 @@
                 <h4 class="card-titlw card-titlw-index">个人信息</h4>
               </div>
 
-              <div class="card-body">
+              <div class="card-body" id="self_id">
                 <div class="row">
                   <div class="col-xl-4">
                     <div class="row">
@@ -316,7 +316,7 @@
                 <h4 class="card-titlw card-titlw-index">工作信息</h4>
               </div>
 
-              <div class="card-body">
+              <div class="card-body" id="work_id">
                 <div class="row">
 
                   <div class="col-xl-4">
@@ -452,6 +452,56 @@
       // $.ajax()
     })
   </script>
+
+  <script>
+    window.onload = function () {
+      // $("work_id").
+      console.log($("#self_id .mb-3"))
+    }
+  </script>
+
+  <!-- <script>
+    // localStorage.setItem('test', 'data.data')
+    // var test2 = localStorage.getItem('test')
+    // console.log(test2);
+
+    var form = document.querySelector('#login_form')
+    var account = document.querySelector('#account')
+    var password = document.querySelector('#password')
+    var submit = document.querySelector('#submit')
+
+    submit.addEventListener('click', function () {
+      var formData = new FormData()
+      formData.append('AccountPhone', account.value)
+      formData.append('Password', password.value)
+      // console.log(form);
+
+      // console.log(formData.get('AccountPhone'));
+
+      $.ajax({
+        type: "GET",
+        processData: false,
+        contentType: false,
+        url: "http://101.200.144.61:8080//profiles/13777123456",
+        data: formData,
+        success: function (data) {
+          if (data.status == 1) {
+            localStorage.setItem('token', data.data)
+            location.href = './index.html'
+          } else {
+            alert(data.msg)
+          }
+        },
+        error: function (data) {
+          console.log("error");
+          alert(data.msg)
+
+          // alert('登录错误，请重新检查信息')
+        }
+      })
+    })
+
+  </script> -->
 
 </body>
 
