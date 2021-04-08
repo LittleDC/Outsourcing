@@ -458,8 +458,12 @@
   </script>
 
   <script>
+    var id_key = [
+      "staff_name", "staff_identity_card", "staff_sexuality", "staff_marry", "staff_phone", "staff_school", "staff_major", "staff_education", "staff_photo", "staff_sertification", "staff_character", "staff_experience"
+    ]
+    // console.log(id_key);
     window.onload = function () {
-      console.log($("#self_id .form-control"))
+      // console.log($("#self_id .form-control"))
       $.ajax({
         type: "GET",
         // url: "http://101.200.144.61:8080/profiles/13777123456",
@@ -467,8 +471,12 @@
         //将返回的数据解析成json
         dataType: "json",
         success: function (data) {
-          // console.log(data);
-          // $("#self_id .form-control:first").val(data.staff_name)
+          // console.log(data.data);
+          // console.log(data.data[id_key[0]]);
+          $("#self_id .form-control").each(function (index, domEle) {
+            domEle.value = data.data[id_key[index]]
+            // console.log(domEle);
+          })
         },
       })
     }
@@ -476,19 +484,15 @@
 
   <script>
     Mock.mock('/profiles/19858190000', 'get', {
-      "data": [
-        {
-          "staff_name": "DC",
-          "staff_identity_card": "XXXXX",
-          "staff_sexuality": "男",
-          "staff_marry": "母胎单身",
-          "staff_phone": "19800000000",
-          "staff_school": "HDU",
-          "staff_major": "计算机专业",
-          "staff_education": "大学"
-        }
-      ],
-      "data_details": {
+      "data": {
+        "staff_name": "DC",
+        "staff_identity_card": "XXXXX",
+        "staff_sexuality": "男",
+        "staff_marry": "母胎单身",
+        "staff_phone": "19800000000",
+        "staff_school": "HDU",
+        "staff_major": "计算机专业",
+        "staff_education": "大学",
         "staff_photo": "",
         "staff_sertification": "",
         "staff_character": "",
