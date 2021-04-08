@@ -416,11 +416,15 @@
   </div>
 
   <!-- Libs JS -->
-  <script src="./dist/libs/apexcharts/dist/apexcharts.min.js"></script>
+  <scrip src="./dist/libs/apexcharts/dist/apexcharts.min.js"></scrip>
   <!-- Tabler Core -->
-  <script src="./dist/js/tabler.min.js"></script>
-  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+  <scrip src="./dist/js/tabler.min.js"></scrip>
+  <!-- <scrip src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></scrip> -->
+  <!-- <scrip src="https://cdn.bootcss.com/Mock.js/1.0.0/mock-min.js"></scrip> -->
+  <script src="./js/mock.js"></script>
+  <script src="./js/jquery.js"></script>
 
+  <!-- 修改保存按钮 -->
   <script>
     // 禁用修改
     $(".form-control").each(function (index, domEle) {
@@ -455,53 +459,47 @@
 
   <script>
     window.onload = function () {
-      // $("work_id").
-      console.log($("#self_id .mb-3"))
+      console.log($("#self_id .form-control"))
+      $.ajax({
+        type: "GET",
+        // url: "http://101.200.144.61:8080/profiles/13777123456",
+        url: '/profiles/19858190000',
+        //将返回的数据解析成json
+        dataType: "json",
+        success: function (data) {
+          // console.log(data);
+          $("#self_id .form-control:first").val(data.staff_name)
+        },
+      })
     }
   </script>
 
-  <!-- <script>
-    // localStorage.setItem('test', 'data.data')
-    // var test2 = localStorage.getItem('test')
-    // console.log(test2);
-
-    var form = document.querySelector('#login_form')
-    var account = document.querySelector('#account')
-    var password = document.querySelector('#password')
-    var submit = document.querySelector('#submit')
-
-    submit.addEventListener('click', function () {
-      var formData = new FormData()
-      formData.append('AccountPhone', account.value)
-      formData.append('Password', password.value)
-      // console.log(form);
-
-      // console.log(formData.get('AccountPhone'));
-
-      $.ajax({
-        type: "GET",
-        processData: false,
-        contentType: false,
-        url: "http://101.200.144.61:8080//profiles/13777123456",
-        data: formData,
-        success: function (data) {
-          if (data.status == 1) {
-            localStorage.setItem('token', data.data)
-            location.href = './index.html'
-          } else {
-            alert(data.msg)
-          }
-        },
-        error: function (data) {
-          console.log("error");
-          alert(data.msg)
-
-          // alert('登录错误，请重新检查信息')
+  <script>
+    Mock.mock('/profiles/19858190000', 'get', {
+      "data": [
+        {
+          "staff_name": "DC",
+          "staff_identity_card": "XXXXX",
+          "staff_sexuality": "男",
+          "staff_marry": "母胎单身",
+          "staff_phone": "19800000000",
+          "staff_school": "HDU",
+          "staff_major": "计算机专业",
+          "staff_education": "大学"
         }
-      })
+      ],
+      "data_details": {
+        "staff_photo": "",
+        "staff_sertification": "",
+        "staff_character": "",
+        "staff_experience": ""
+      },
+      "msg": "",
+      "status": ""
     })
+  </script>
 
-  </script> -->
+
 
 </body>
 
