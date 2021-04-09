@@ -223,6 +223,52 @@
             </div>
             <div class="collapse navbar-collapse" id="navbar-menu">
 
+              <!-- <div class="d-flex flex-column flex-md-row flex-fill align-items-stretch align-items-md-center">
+                  <ul class="navbar-nav">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="./#">
+                        <span class="nav-link-title">
+                          First
+                        </span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="./#">
+                        <span class="nav-link-title">
+                          Second
+                        </span>
+                        <span class="badge bg-red">2</span>
+                      </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#navbar-third" data-bs-toggle="dropdown" role="button"
+                        aria-expanded="false">
+                        <span class="nav-link-title">
+                          Third
+                        </span>
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="./#">
+                          First
+                        </a>
+                        <a class="dropdown-item" href="./#">
+                          Second
+                        </a>
+                        <a class="dropdown-item" href="./#">
+                          Third
+                        </a>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="./#">
+                        <span class="nav-link-title">
+                          Disabled
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+  
+                </div> -->
             </div>
           </div>
         </header>
@@ -255,11 +301,11 @@
                       </div>
                       <div class="mb-3">
                         <label class="form-label required">性别</label>
-                        <input type="email" class="form-control" autocomplete="off" value="男" disabled />
+                        <input type="email" class="form-control" autocomplete="off" value="0" disabled />
                       </div>
                       <div class="mb-3">
                         <label class="form-label">婚姻</label>
-                        <input type="tel" class="form-control" autocomplete="off" value="未婚" />
+                        <input type="tel" class="form-control" autocomplete="off" value="0" />
                       </div>
 
                     </div>
@@ -455,14 +501,30 @@
       $(this).css("display", "none")
       $("#change_btn").css("display", "block")
 
+      var id_key2 = [
+        "StaffName", "StaffIdentityCard", "StaffSexuality", "StaffMarry", "StaffPhone", "StaffSchool", "StaffMajor", "StaffEducation",
+      ]
+      // var id_key3 = ["StaffPhoto", "StaffSertification", "StaffCharacter", "StaffExperience"]
       var formData = new FormData()
-      formData.append('StaffName', $("#self_id .form-control")[0].value)
-      console.log(formData.get("StaffName"));
+      // formData.append('StaffName', $("#self_id .form-control")[0].value)
+      $.each(id_key2, function (index, element) {
+        // console.log(element, index);
+        // console.log($("#self_id .form-control")[index]);
+        formData.append(element, ($("#self_id .form-control")[index]).value)
+        // console.log("test:" + formData.get(element));
+      })
+      // $.each(id_key3, function (index, element) {
+      //   formData.append(element, "")
+      //   console.log("test:" + formData.get(element));
+      // })
+
+      var username = localStorage.getItem("username")
+
       $.ajax({
         type: "put",
         processData: false,
         contentType: false,
-        url: "http://101.200.144.61:8080/profiles/13777123456",
+        url: "http://101.200.144.61:8080/profiles/" + username,
         data: formData,
         success: function (data) {
           if (data.status == 1) {
@@ -487,10 +549,12 @@
     ]
     // console.log(id_key);
     window.onload = function () {
+      var username = localStorage.getItem("username")
+      // console.log(username);
       // console.log($("#self_id .form-control"))
       $.ajax({
         type: "GET",
-        url: "http://101.200.144.61:8080/profiles/13777123456",
+        url: "http://101.200.144.61:8080/profiles/" + username,
         // url: '/profiles/19858190000',
         //将返回的数据解析成json
         dataType: "json",
