@@ -454,14 +454,33 @@
       })
       $(this).css("display", "none")
       $("#change_btn").css("display", "block")
+
+      var formData = new FormData()
+      formData.append('StaffName', $("#self_id .form-control")[0].value)
+      console.log(formData.get("StaffName"));
       $.ajax({
-        type: "GET",
-        url: ""
+        type: "put",
+        processData: false,
+        contentType: false,
+        url: "http://101.200.144.61:8080/profiles/13777123456",
+        data: formData,
+        success: function (data) {
+          if (data.status == 1) {
+            alert(data.msg)
+            console.log("change information success");
+          } else {
+            alert(data.msg)
+          }
+        },
+        error: function (data) {
+          alert(data.msg)
+        }
       })
     })
   </script>
 
   <!-- 同步个人信息 -->
+
   <script>
     var id_key = [
       "staff_name", "staff_identity_card", "staff_sexuality", "staff_marry", "staff_phone", "staff_school", "staff_major", "staff_education", "staff_photo", "staff_sertification", "staff_character", "staff_experience"
@@ -470,7 +489,7 @@
     window.onload = function () {
       // console.log($("#self_id .form-control"))
       $.ajax({
-        type: "PUT",
+        type: "GET",
         url: "http://101.200.144.61:8080/profiles/13777123456",
         // url: '/profiles/19858190000',
         //将返回的数据解析成json
@@ -482,6 +501,8 @@
             domEle.value = data.data[id_key[index]]
             // console.log(domEle);
           })
+          console.log("get information success");
+
         },
       })
     }
