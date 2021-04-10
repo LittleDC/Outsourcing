@@ -399,25 +399,26 @@
       "DeptId", "WorkPost", "WorkInTime", "StaffId", "WorkSalary", "CreaterName"
     ]
     var token = localStorage.getItem("token")
-
-    var workData = new FormData()
-    $.each(create_work, function (index, element) {
-      workData.append(element, ($("#work_info .form-control")[index]).value)
-    })
-
-    var test = { "DeptId": ($("#work_info .form-control")[0]).value }
-
     var username = localStorage.getItem("username")
 
+
     $("#submit").click(function () {
+      var workData = new FormData()
+      $.each(create_work, function (index, element) {
+        workData.append(element, ($("#work_info .form-control")[index]).value)
+      })
+
       $.ajax({
         type: "POST",
-        // processData: false,
-        // contentType: false,
-        // url: "http://101.200.144.61:8080/work/" + username,
-        url: '/work',
+        processData: false,
+        contentType: false,
+        url: "http://101.200.144.61:8080/work/" + username,
+        // url: '/work',
 
-        // data: test,
+        data: workData,
+        beforeSend: function (request) {
+          request.setRequestHeader("Authorization", token);
+        },
         success: function (data) {
           data = JSON.parse(data)
 
