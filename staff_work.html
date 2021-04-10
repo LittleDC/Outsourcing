@@ -265,28 +265,27 @@
                     <th>创建人</th>
 
                     <th>评价时间</th>
-                    <th>实际评价分数</th>
+                    <th>绩效分数</th>
                     <th></th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody id="content">
                   <tr>
                     <td><span class="text-muted">001403</span></td>
                     <td>
                       11870613
                     </td>
-                    <td><a href="invoice.html" class="text-reset" tabindex="-1">DC</a></td>
+                    <td><a href="#" class="text-reset" tabindex="-1">Joker</a></td>
 
                     <td>
-                      <span class="flag"></span>
-                      Joker
+                      DC
                     </td>
 
                     <td>
-                      2021/04/05
+                      2021-04-05
                     </td>
                     <td>
-                      <span class="badge bg-success me-1"></span> 90
+                      <span class="badge bg-success me-1">90</span>
                     </td>
 
                     <td class="text-end">
@@ -310,18 +309,17 @@
                     <td>
                       11870603
                     </td>
-                    <td><a href="invoice.html" class="text-reset" tabindex="-1">DC</a></td>
+                    <td><a href="#" class="text-reset" tabindex="-1">Joker</a></td>
 
                     <td>
-                      <span class="flag"></span>
-                      Joker
+                      DC
                     </td>
 
                     <td>
-                      2021/04/03
+                      2021-04-03
                     </td>
                     <td>
-                      <span class="badge bg-blue me-1"></span> 86
+                      <span class="badge bg-blue me-1">86</span>
                     </td>
 
                     <td class="text-end">
@@ -345,18 +343,51 @@
                     <td>
                       11870590
                     </td>
-                    <td><a href="invoice.html" class="text-reset" tabindex="-1">DC</a></td>
+                    <td><a href="#" class="text-reset" tabindex="-1">Joker</a></td>
 
                     <td>
-                      <span class="flag"></span>
-                      Joker
+                      DC
                     </td>
 
                     <td>
-                      2021/04/01
+                      2021-04-01
                     </td>
                     <td>
-                      <span class="badge bg-danger me-1"></span> 80
+                      <span class="badge bg-danger me-1">79</span>
+                    </td>
+
+                    <td class="text-end">
+                      <span class="dropdown">
+                        <button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport"
+                          data-bs-toggle="dropdown">更多</button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                          <a class="dropdown-item" href="#">
+                            详情
+                          </a>
+                          <a class="dropdown-item" href="#">
+                            有疑问？反馈
+                          </a>
+                        </div>
+                      </span>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td><span class="text-muted">001400</span></td>
+                    <td>
+                      11870587
+                    </td>
+                    <td><a href="#" class="text-reset" tabindex="-1">Joker</a></td>
+
+                    <td>
+                      DC
+                    </td>
+
+                    <td>
+                      2021-03-28
+                    </td>
+                    <td>
+                      <span class="badge bg-blue me-1">87</span>
                     </td>
 
                     <td class="text-end">
@@ -391,17 +422,16 @@
                       stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                       <polyline points="15 6 9 12 15 18"></polyline>
-                    </svg>prev</a>
+                    </svg>prev
+                  </a>
                 </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item "><a class="page-link" href="#">2</a></li>
                 <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">4</a></li>
-                <li class="page-item"><a class="page-link" href="#">5</a></li>
                 <li class="page-item">
-                  <a class="page-link" href="#">next<svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24"
-                      height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
-                      stroke-linecap="round" stroke-linejoin="round">
+                  <a class="page-link" href="#">next
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                      stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                       <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                       <polyline points="9 6 15 12 9 18"></polyline>
                     </svg>
@@ -494,7 +524,7 @@
                   <!-- <span class="input-group-text">
                     https://tabler.io/reports/
                   </span> -->
-                  <input type="text" class="form-control" value="90分" autocomplete="off">
+                  <input type="text" id="score" class="form-control" value="90分" autocomplete="off">
                 </div>
               </div>
             </div>
@@ -521,7 +551,7 @@
             <div class="col-lg-6">
               <div class="mb-3">
                 <label class="form-label">时间</label>
-                <input type="date" class="form-control">
+                <input type="date" id="time" class="form-control">
               </div>
             </div>
             <div class="col-lg-12">
@@ -536,7 +566,7 @@
           <a href="#" class="btn btn-link link-secondary" data-bs-dismiss="modal">
             取消
           </a>
-          <a href="#" class="btn btn-primary ms-auto" data-bs-dismiss="modal">
+          <a href="#" id="add" class="btn btn-primary ms-auto" data-bs-dismiss="modal">
             <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
               stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -557,7 +587,7 @@
   <!-- Tabler Core -->
   <script src="./dist/js/tabler.min.js"></script>
 
-  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+  <script src="./js/jquery.js"></script>
 
   <script>
     $("#work1").on("click", function () {
@@ -566,6 +596,33 @@
     })
     $("#work0").on("click", function () {
       $("#details").css({ "display": "block" })
+    })
+  </script>
+
+  <script>
+    $("#add").click(function () {
+      var element = $("<tr></tr>")
+      element.prepend('<td><span class="text-muted">00' + (parseInt($("#content span:first").text(), 10) + 1) + "</span></td>")
+      element.append('<td>' + (parseInt($("#content td:eq(1)").text(), 10) + 1) + '</td>')
+      element.append('<td><a href="#" class="text-reset" tabindex="-1">Joker</a></td>')
+      element.append('<td>DC</td>')
+      element.append('<td>' + ($("#time").val()) + '</td>')
+      var number = parseInt(($("#score")[0].value).substr(0, 2))
+      // console.log(number);
+      var score_span = $('<span class="badge me-1">' + number + '</span>')
+      if (number >= 90) {
+        score_span.addClass("bg-success")
+      } else if (number >= 80) {
+        score_span.addClass("bg-blue")
+      } else {
+        score_span.addClass("bg-danger")
+      }
+      // console.log(score_span);
+      element.append('<td>' + score_span[0].outerHTML + '</td>')
+      element.append('<td class="text-end"><span class="dropdown"><button class="btn dropdown-toggle align-text-top" data-bs-boundary="viewport" data-bs-toggle="dropdown">更多</button><div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="#">详情</a><a class="dropdown-item" href="#">有疑问？反馈</a></div></span></td>')
+      // console.log($(".text-end")[0]);
+
+      $("#content").prepend(element)
     })
   </script>
 
