@@ -14,6 +14,7 @@
   <link href="./dist/css/tabler-vendors.min.css" rel="stylesheet" />
   <link href="./dist/css/demo.min.css" rel="stylesheet" />
   <link rel="shortcut icon" href="./favicon.ico">
+  <script src="./js/jquery.js"></script>
 
   <link rel="stylesheet" href="./css/common.css">
 </head>
@@ -301,53 +302,48 @@
                     </div>
                   </div>
 
-                  <div class="col-xl-4">
-                    <div class="row">
-                      <div class="mb-3">
-                        <label class="form-label required">部门</label>
-                        <input type="text" class="form-control" autocomplete="off" value="前端部" disabled="">
+                  <div id="work_info" class="row">
+                    <div class="col-xl-4">
+                      <div class="row">
+                        <div class="mb-3">
+                          <label class="form-label required">部门号</label>
+                          <input type="text" class="form-control" autocomplete="off" value="">
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label required">就职岗位</label>
+                          <input type="email" class="form-control" autocomplete="off" value="">
+                        </div>
+                        <div class="mb-3 ">
+                          <label class="form-label required">就职时间</label>
+                          <input type="tel" class="form-control" autocomplete="off" value="">
+                        </div>
                       </div>
-                      <div class="mb-3">
-                        <label class="form-label required">就职岗位</label>
-                        <input type="email" class="form-control" autocomplete="off" value="跑龙套" disabled="">
+                    </div>
+
+                    <div class="col-xl-4">
+                      <div class="row">
+                        <div class="mb-3">
+                          <label class="form-label required">员工号</label>
+                          <input type="text" class="form-control" autocomplete="off" value="">
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label ">薪酬情况</label>
+                          <input type="text" class="form-control" autocomplete="off" value="">
+                        </div>
+                        <div class="mb-3">
+                          <label class="form-label required">建档人</label>
+                          <input type="tel" class="form-control" autocomplete="off" value="">
+                        </div>
                       </div>
                     </div>
                   </div>
-
-                  <div class="col-xl-4">
-                    <div class="row">
-                      <div class="mb-3">
-                        <label class="form-label required">员工号</label>
-                        <input type="text" class="form-control" autocomplete="off" value="131420" disabled="">
-                      </div>
-                      <div class="mb-3">
-                        <label class="form-label ">薪酬情况</label>
-                        <input type="text" class="form-control" autocomplete="off" value="-10000" disabled="">
-                      </div>
-
-                    </div>
-                  </div>
-
-                  <div class="clo-xl-4">
-                    <div class="row">
-                      <div class="mb-3">
-                        <label class="form-label required">就职时间</label>
-                        <input type="tel" class="form-control" autocomplete="off" value="tomorrow" disabled="">
-                      </div>
-                      <div class="mb-3">
-                        <label class="form-label">建档人</label>
-                        <input type="tel" class="form-control" autocomplete="off" value="myself" disabled="">
-                      </div>
-                    </div>
-                  </div>
-
                 </div>
               </div>
 
               <div class="card-footer text-end">
                 <div class="d-flex">
                   <!-- <button type="submit" class="btn btn-primary ms-auto">提交</button> -->
-                  <input type="button" class="btn btn-primary ms-auto" value="提交">
+                  <input id="submit" type="button" class="btn btn-primary ms-auto" value="提交">
                 </div>
               </div>
 
@@ -393,6 +389,47 @@
   <script src="./dist/libs/apexcharts/dist/apexcharts.min.js"></script>
   <!-- Tabler Core -->
   <script src="./dist/js/tabler.min.js"></script>
+
+  <script>
+    var create_work = [
+      "DeptId", "WorkPost", "WorkInTime", "StaffId", "WorkSalary", "CreaterName"
+    ]
+    var token = localStorage.getItem("token")
+
+    var workData = new FormData()
+    $.each(create_work, function (index, element) {
+      workData.append(element, ($("#work_info .form-control")[index]).value)
+    })
+
+    var username = localStorage.getItem("username")
+
+    $("#submit").click = function () {
+      $.ajax({
+        type: "POST",
+        processData: false,
+        contentType: false,
+        url: "http://101.200.144.61:8080/work/" + username,
+        headers: {
+          'Content-Type': 'application/json;charset=utf8',
+          "Authorization": token,
+        },
+        data: workData,
+        success: function (data) {
+          if (data.status == 1) {
+            alert(data.msg)
+            console.log("change work info success");
+            console.log(data);
+          } else {
+            // alert(data.msg)
+            alert("error1")
+            console.log(data);
+
+          }
+        },
+      })
+    }
+  </script>
+
 
 </body>
 
