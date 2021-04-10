@@ -15,6 +15,8 @@
   <link href="./dist/css/demo.min.css" rel="stylesheet" />
   <link rel="shortcut icon" href="./favicon.ico">
   <script src="./js/jquery.js"></script>
+  <script src="./js/mock.js"></script>
+
 
   <link rel="stylesheet" href="./css/common.css">
 </head>
@@ -390,6 +392,8 @@
   <!-- Tabler Core -->
   <script src="./dist/js/tabler.min.js"></script>
 
+  <script src="./mock/create.js"></script>
+
   <script>
     var create_work = [
       "DeptId", "WorkPost", "WorkInTime", "StaffId", "WorkSalary", "CreaterName"
@@ -401,20 +405,22 @@
       workData.append(element, ($("#work_info .form-control")[index]).value)
     })
 
+    var test = { "DeptId": ($("#work_info .form-control")[0]).value }
+
     var username = localStorage.getItem("username")
 
-    $("#submit").click = function () {
+    $("#submit").click(function () {
       $.ajax({
         type: "POST",
-        processData: false,
-        contentType: false,
-        url: "http://101.200.144.61:8080/work/" + username,
-        headers: {
-          'Content-Type': 'application/json;charset=utf8',
-          "Authorization": token,
-        },
-        data: workData,
+        // processData: false,
+        // contentType: false,
+        // url: "http://101.200.144.61:8080/work/" + username,
+        url: '/work',
+
+        // data: test,
         success: function (data) {
+          data = JSON.parse(data)
+
           if (data.status == 1) {
             alert(data.msg)
             console.log("change work info success");
@@ -423,11 +429,12 @@
             // alert(data.msg)
             alert("error1")
             console.log(data);
+            console.log(data.status);
 
           }
         },
       })
-    }
+    })
   </script>
 
 
