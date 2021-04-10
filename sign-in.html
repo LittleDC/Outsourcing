@@ -107,8 +107,8 @@
         success: function (data) {
           if (data.status == 1) {
             localStorage.setItem('token', data.data)
-            // localStorage.setItem('username', account.value)
-            localStorage.setItem('username', '13777123456')
+            localStorage.setItem('username', account.value)
+            // localStorage.setItem('username', '13777123456')
             location.href = './index.html'
           } else {
             alert(data.msg)

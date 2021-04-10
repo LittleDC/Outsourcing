@@ -353,7 +353,14 @@
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
 
+              <div class="card-footer text-end">
+                <div class="d-flex">
+                  <!-- <button type="submit" class="btn btn-primary ms-auto">修改</button> -->
+                  <input type="button" class="btn btn-primary ms-auto" id="change_btn" value="修改">
+                  <input type="button" class="btn btn-primary ms-auto" id="save_btn" value="保存" style="display: none;">
                 </div>
 
               </div>
@@ -409,16 +416,6 @@
                   </div>
                 </div>
               </div>
-
-              <div class="card-footer text-end">
-                <div class="d-flex">
-                  <!-- <button type="submit" class="btn btn-primary ms-auto">修改</button> -->
-                  <input type="button" class="btn btn-primary ms-auto" id="change_btn" value="修改">
-                  <input type="button" class="btn btn-primary ms-auto" id="save_btn" value="保存" style="display: none;">
-                </div>
-
-              </div>
-
 
             </form>
 
@@ -481,9 +478,9 @@
     // 解锁
     $("#change_btn").click(function () {
       // console.log($(".form-control"));
-      // console.log($(this));
+      // console.log($(this))
 
-      $(".form-control").each(function (index, domEle) {
+      $("#self_id .form-control").each(function (index, domEle) {
         // console.log(domEle);
         domEle.disabled = false
       })
@@ -494,42 +491,45 @@
 
     $("#save_btn").click(function () {
       // console.log("this save button");
-      $(".form-control").each(function (index, domEle) {
+      $("#self_id .form-control").each(function (index, domEle) {
         // console.log(domEle);
         domEle.disabled = true
       })
       $(this).css("display", "none")
       $("#change_btn").css("display", "block")
 
+
+      ///////// 以下接口操作//////////
       var id_key2 = [
         "StaffName", "StaffIdentityCard", "StaffSexuality", "StaffMarry", "StaffPhone", "StaffSchool", "StaffMajor", "StaffEducation",
       ]
       // var id_key3 = ["StaffPhoto", "StaffSertification", "StaffCharacter", "StaffExperience"]
-      var formData = new FormData()
-      // formData.append('StaffName', $("#self_id .form-control")[0].value)
+      var idData = new FormData()
+      // idData.append('StaffName', $("#self_id .form-control")[0].value)
       $.each(id_key2, function (index, element) {
         // console.log(element, index);
         // console.log($("#self_id .form-control")[index]);
-        formData.append(element, ($("#self_id .form-control")[index]).value)
-        // console.log("test:" + formData.get(element));
+        idData.append(element, ($("#self_id .form-control")[index]).value)
+        // console.log("test:" + idData.get(element));
       })
       // $.each(id_key3, function (index, element) {
-      //   formData.append(element, "")
-      //   console.log("test:" + formData.get(element));
+      //   idData.append(element, "")
+      //   console.log("test:" + idData.get(element));
       // })
 
       var username = localStorage.getItem("username")
 
+      // 修改个人信息
       $.ajax({
         type: "put",
         processData: false,
         contentType: false,
         url: "http://101.200.144.61:8080/profiles/" + username,
-        data: formData,
+        data: idData,
         success: function (data) {
           if (data.status == 1) {
             alert(data.msg)
-            console.log("change information success");
+            // console.log("change information success");
           } else {
             alert(data.msg)
           }
@@ -538,6 +538,41 @@
           alert(data.msg)
         }
       })
+
+      /*//修改工作信息
+      var work_key2 = [
+        "CompanyId", "DeptId", "WorkPost", "WorkInTime", "StaffId", "WorkSalary", "WorkAttendance", "CreaterName"
+      ]
+      var token = localStorage.getItem("token")
+
+      var workData = new FormData()
+      // $.each(work_key2, function (index, element) {
+      //   workData.append(element, ($("#work_id .form-control")[index]).value)
+      // })
+      workData.append("CompanyId", ($("#work_id .form-control")[0]).value)
+      // workData.append("Authorization", token)
+      console.log(workData.get("CompanyId"));
+
+      $.ajax({
+        type: "POST",
+        processData: false,
+        contentType: false,
+        url: "http://101.200.144.61:8080/work/" + username,
+        headers: { "Authorization": token },
+        data: workData,
+        success: function (data) {
+          if (data.status == 1) {
+            alert(data.msg)
+            console.log("change work info success");
+            console.log(data);
+          } else {
+            // alert(data.msg)
+            alert("error1")
+            console.log(data);
+
+          }
+        },
+      })*/
     })
   </script>
 
@@ -545,8 +580,12 @@
 
   <script>
     var id_key = [
-      "staff_name", "staff_identity_card", "staff_sexuality", "staff_marry", "staff_phone", "staff_school", "staff_major", "staff_education", "staff_photo", "staff_sertification", "staff_character", "staff_experience"
+      "staff_name", "staff_identity_card", "staff_sex", "staff_marry", "staff_phone", "staff_school", "staff_major", "staff_education", "staff_photo", "staff_sertification", "staff_character", "staff_experience"
     ]
+    var work_key = [
+      "company_id", "dept_id", "work_post", "work_in_time", "staff_id", "work_salary", "work_attendance", "creater_name"
+    ]
+
     // console.log(id_key);
     window.onload = function () {
       var username = localStorage.getItem("username")
@@ -565,15 +604,36 @@
             domEle.value = data.data[id_key[index]]
             // console.log(domEle);
           })
-          console.log("get information success");
-
+          // console.log("get information success");
         },
+      })
+
+      var token = localStorage.getItem("token")
+      var tokenData = new FormData()
+      tokenData.append("Authorization", token)
+      // console.log("get work token:" + tokenData.get("Authorization"));
+
+      $.ajax({
+        type: "GET",
+        processData: false,
+        contentType: false,
+        url: "http://101.200.144.61:8080/work/" + username,//13777123456
+        data: tokenData,
+        // dataType: "json",
+        success: function (data) {
+          console.log("get work information");
+          console.log(data.data);
+          $("#work_id .form-control").each(function (index, domEle) {
+            domEle.value = data.data[work_key[index]]
+          })
+          console.log("get work info success");
+        },
+        error: function () {
+          console.log("get work info error");
+        }
       })
     }
   </script>
-
-  <!-- 修改返回数据给后台 -->
-
 
 </body>
 
