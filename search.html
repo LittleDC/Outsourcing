@@ -14,6 +14,7 @@
   <link href="./dist/css/tabler-vendors.min.css" rel="stylesheet" />
   <link href="./dist/css/demo.min.css" rel="stylesheet" />
   <link rel="shortcut icon" href="./favicon.ico">
+  <script src="./js/jquery.js"></script>
 
   <link rel="stylesheet" href="./css/common.css">
 </head>
@@ -241,7 +242,7 @@
           <div class="card-body">
             <!-- 搜索框 -->
             <div class="input-icon mb-3 mine_search">
-              <input type="text" class="form-control" placeholder="请输入手机号查询...">
+              <input type="text" id="search" class="form-control" placeholder="请输入手机号查询...">
               <span class="input-icon-addon">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
                   stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -252,8 +253,9 @@
               </span>
             </div>
 
-            <div class="col-12">
-              <div class="card">
+
+            <div class="col-12" id="content">
+              <div class="card" style="display: none;">
                 <div class="table-responsive">
                   <table class="table table-vcenter table-mobile-md card-table">
                     <thead>
@@ -268,9 +270,9 @@
                       <tr>
                         <td data-label="Name">
                           <div class="d-flex py-1 align-items-center">
-                            <span class="avatar me-2" style="background-image: url(./static/avatars/010m.jpg)"></span>
+                            <span class="avatar me-2">Mike</span>
                             <div class="flex-fill">
-                              <div class="font-weight-medium">小菜鸡</div>
+                              <div class="font-weight-medium">Mike</div>
                               <div class="text-muted text-reset">198****1234</div>
                             </div>
                           </div>
@@ -372,6 +374,16 @@
   <script src="./dist/libs/apexcharts/dist/apexcharts.min.js"></script>
   <!-- Tabler Core -->
   <script src="./dist/js/tabler.min.js"></script>
+
+  <script>
+    $("#search").blur(function () {
+      if ($(this).val() == '19800001234') {
+        $("#content>div").css("display", "block")
+      } else {
+        $("#content>div").css("display", "none")
+      }
+    })
+  </script>
 
 </body>
 
