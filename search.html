@@ -349,8 +349,17 @@
             <path d="M12 9v2m0 4v.01"></path>
             <path d="M5 19h14a2 2 0 0 0 1.84 -2.75l-7.1 -12.25a2 2 0 0 0 -3.5 0l-7.1 12.25a2 2 0 0 0 1.75 2.75"></path>
           </svg>
-          <h3>发送验证码？</h3>
-          <div class="text-muted">详细信息需要获得用户同意，请明确查询是否正确</div>
+          <!-- <h3>发送验证码？</h3> -->
+          <div>
+            <input type="text" class="form-control" style="float: left;width: 59%;margin-bottom: 1rem;"
+              name="example-text-input" placeholder="验证码(1234)">
+            <div class="" style="float: left;margin-bottom: 1rem;width: 40%;">
+              <button class="btn btn-light btn-pill" id="send">
+                获取验证码
+              </button>
+            </div>
+          </div>
+          <div class="text-muted" style="float: left;">详细信息需要获得用户同意，请明确查询是否正确</div>
         </div>
         <div class="modal-footer">
           <div class="w-100">
@@ -360,7 +369,7 @@
                   取消
                 </a>
               </div>
-              <div class="col">
+              <div class="col" id="button">
                 <a href="#" class="btn btn-danger w-100" data-bs-dismiss="modal">
                   确定
                 </a>
@@ -392,6 +401,34 @@
         $("#content>div").css("display", "none")
         $("#content>h1").css("display", "none")
       }
+    })
+  </script>
+
+  <!-- 定时器 -->
+  <script>
+    var time = 60
+    $("#send").click(function () {
+      // console.log(this);
+      this.disabled = true
+      this.innerHTML = time + "秒"
+      var timer = setInterval(function () {
+        // console.log(this);
+        if (time == 0) {
+          clearInterval(timer)
+          $("#send")[0].disabled = false
+          $("#send")[0].innerHTML = "获取验证码"
+          time = 60
+        } else {
+          time--
+          $("#send")[0].innerHTML = time + "秒"
+        }
+      }, 1000)
+    })
+  </script>
+
+  <script>
+    $("#button").click(function () {
+      location.href = "./staff_ID.html"
     })
   </script>
 
