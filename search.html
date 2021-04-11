@@ -351,8 +351,8 @@
           </svg>
           <!-- <h3>发送验证码？</h3> -->
           <div>
-            <input type="text" class="form-control" style="float: left;width: 59%;margin-bottom: 1rem;"
-              name="example-text-input" placeholder="验证码(1234)">
+            <input type="text" id="ID_code" class="form-control" style="float: left;width: 59%;margin-bottom: 1rem;"
+              name="example-text-input" placeholder="验证码">
             <div class="" style="float: left;margin-bottom: 1rem;width: 40%;">
               <button class="btn btn-light btn-pill" id="send">
                 获取验证码
@@ -411,6 +411,7 @@
       // console.log(this);
       this.disabled = true
       this.innerHTML = time + "秒"
+      $("#ID_code")[0].placeholder = "验证码(1234)"
       var timer = setInterval(function () {
         // console.log(this);
         if (time == 0) {
@@ -423,13 +424,19 @@
           $("#send")[0].innerHTML = time + "秒"
         }
       }, 1000)
+
+      $("#button").click(function () {
+        if ($("#ID_code")[0].value == "1234") {
+          location.href = "./staff_ID.html"
+        } else {
+          alert("验证码错误")
+        }
+      })
     })
   </script>
 
   <script>
-    $("#button").click(function () {
-      location.href = "./staff_ID.html"
-    })
+
   </script>
 
 </body>
