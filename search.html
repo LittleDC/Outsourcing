@@ -255,6 +255,7 @@
 
 
             <div class="col-12" id="content">
+              <h1 style="text-align:center;display: none;">无用户信息</h1>
               <div class="card" style="display: none;">
                 <div class="table-responsive">
                   <table class="table table-vcenter table-mobile-md card-table">
@@ -383,8 +384,10 @@
     $("#search").blur(function () {
       if ($(this).val() == '19800001234') {
         $("#content>div").css("display", "block")
+        $("#content>h1").css("display", "none")
       } else {
         $("#content>div").css("display", "none")
+        $("#content>h1").css("display", "block")
       }
     })
   </script>
