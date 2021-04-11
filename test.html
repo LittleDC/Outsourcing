@@ -6,13 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="./js/jquery.js"></script>
 </head>
 
 <body>
-    <form action="put">
-        <input type="text" name="username">
-        <input type="submit" value="submit">
-    </form>
+    <h1>test</h1>
+
+    <script>
+        var username = localStorage.getItem("username")
+        var token = localStorage.getItem("token")
+        console.log(token);
+
+        var formData = new FormData()
+        formData.append("CreaterName", "DC")
+        console.log(formData.get("CreaterName"))
+
+
+        $.ajax({
+            type: "POST",
+            // processData: false,
+            // contentType: false,
+            url: "http://101.200.144.61:8080/work/" + username,
+
+            contentType: "application/json;charset=utf-8",
+            data: JSON.stringify({ "CreaterName": "DC" }),
+            dataType: "json",
+
+            // data: formData,
+            // headers: {
+            //     "Authorization": token,
+            //     'Content-Type': 'application/x-www-form-urlencoded'
+            // },
+            beforeSend: function (XMLHttpRequest) {
+                XMLHttpRequest.setRequestHeader("Authorization", token);
+            },
+
+            success: function (data) {
+                if (data.status == 1) {
+                    alert(data.msg)
+                    console.log("change work info success");
+                    console.log(data);
+                } else {
+                    // alert(data.msg)
+                    alert("error1")
+                    console.log(data);
+
+                }
+            }
+        })
+    </script>
 </body>
 
 </html>

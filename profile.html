@@ -615,11 +615,15 @@
 
       $.ajax({
         type: "GET",
-        processData: false,
-        contentType: false,
+        // processData: false,
+        // contentType: false,
         url: "http://101.200.144.61:8080/work/" + username,//13777123456
-        data: tokenData,
+        // data: tokenData,
         // dataType: "json",
+        beforeSend: function (request) {
+          request.setRequestHeader("Authorization", token);
+        },
+
         success: function (data) {
           console.log("get work information");
           console.log(data.data);

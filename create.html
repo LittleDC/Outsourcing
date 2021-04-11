@@ -270,7 +270,7 @@
                     <div class="row">
                       <div class="mb-3">
                         <label class="form-label required">手机号</label>
-                        <input type="text" class="form-control" autocomplete="off" />
+                        <input type="text" id="phone" class="form-control" autocomplete="off" />
                       </div>
                       <div class="mb-3">
                         <label class="form-label required">毕业院校</label>
@@ -399,10 +399,11 @@
       "DeptId", "WorkPost", "WorkInTime", "StaffId", "WorkSalary", "CreaterName"
     ]
     var token = localStorage.getItem("token")
-    var username = localStorage.getItem("username")
-
+    // var username = localStorage.getItem("username")
 
     $("#submit").click(function () {
+      username = $("#phone")[0].value
+      console.log(username);
       var workData = new FormData()
       $.each(create_work, function (index, element) {
         workData.append(element, ($("#work_info .form-control")[index]).value)
@@ -420,8 +421,6 @@
           request.setRequestHeader("Authorization", token);
         },
         success: function (data) {
-          data = JSON.parse(data)
-
           if (data.status == 1) {
             alert(data.msg)
             console.log("change work info success");
