@@ -388,7 +388,7 @@
                       </div>
                       <div class="mb-3">
                         <label class="form-label required">就职时间</label>
-                        <input type="tel" class="form-control" autocomplete="off" value="2019/04/01" />
+                        <input type="tel" id="work_time" class="form-control" autocomplete="off" value="2019/04/01" />
                       </div>
                     </div>
                   </div>
@@ -631,6 +631,8 @@
             domEle.value = data.data[work_key[index]]
           })
           console.log("get work info success");
+          $("#work_time")[0].value = $("#work_time")[0].value.substr(0, 10)
+          // console.log($("#work_time")[0])
         },
         error: function () {
           console.log("get work info error");
