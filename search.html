@@ -385,9 +385,12 @@
       if ($(this).val() == '19800001234') {
         $("#content>div").css("display", "block")
         $("#content>h1").css("display", "none")
-      } else {
+      } else if ($(this).val() != '') {
         $("#content>div").css("display", "none")
         $("#content>h1").css("display", "block")
+      } else {
+        $("#content>div").css("display", "none")
+        $("#content>h1").css("display", "none")
       }
     })
   </script>
