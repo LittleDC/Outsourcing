@@ -1,0 +1,543 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>个人信息 - 人才管理系统 - 微小企业的得力助手.</title>
+  <!-- CSS files -->
+  <link href="./dist/css/tabler.min.css" rel="stylesheet" />
+  <link href="./dist/css/tabler-flags.min.css" rel="stylesheet" />
+  <link href="./dist/css/tabler-payments.min.css" rel="stylesheet" />
+  <link href="./dist/css/tabler-vendors.min.css" rel="stylesheet" />
+  <link href="./dist/css/demo.min.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="./favicon.ico">
+
+  <link rel="stylesheet" href="./css/common.css">
+</head>
+
+<body class="antialiased">
+  <div class="page">
+
+    <!-- ！！！！！！！！！！！begin -->
+    <!-- 侧边导航栏 -->
+    <aside class="navbar navbar-vertical navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <h1 class="navbar-brand navbar-brand-autodark">
+
+          <a href="./index.html">
+            <img src="./static/logo-white.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+            <!-- <h1>人才管理系统</h1> -->
+          </a>
+        </h1>
+
+        <!-- 移动端导航栏 -->
+        <div class="navbar-nav flex-row d-lg-none">
+          <div class="nav-item dropdown d-none d-md-flex me-3">
+            <a href="#" class="nav-link px-0" data-bs-toggle="dropdown" tabindex="-1" aria-label="Show notifications">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
+                <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
+              </svg>
+              <span class="badge bg-red"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end dropdown-menu-card">
+              <div class="card">
+                <div class="card-body">
+                  通知测试2
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown"
+              aria-label="Open user menu">
+
+              <!-- 头像 -->
+              <span class="avatar avatar-sm" style="background-image: url(./static/avatars/052.jpg)"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+
+              <a href="#" class="dropdown-item">反馈</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">设置</a>
+              <a href="./staff_sign-in.html" class="dropdown-item">登出</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-menu">
+          <ul class="navbar-nav pt-lg-3 mine_ul_right">
+
+            <!-- evaluate绩效查看 -->
+            <li class="nav-item">
+              <a class="nav-link" href="./staff_evaluate.html">
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <circle cx="15" cy="15" r="3" />
+                    <path d="M13 17.5v4.5l2 -1.5l2 1.5v-4.5" />
+                    <path d="M10 19h-5a2 2 0 0 1 -2 -2v-10c0 -1.1 .9 -2 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -1 1.73" />
+                    <line x1="6" y1="9" x2="18" y2="9" />
+                    <line x1="6" y1="12" x2="9" y2="12" />
+                    <line x1="6" y1="15" x2="8" y2="15" />
+                  </svg>
+                </span>
+                <span class="nav-link-title">
+                  工作情况
+                </span>
+              </a>
+            </li>
+
+            <!-- profile个人信息查看 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="./staff_index.html">
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <circle cx="12" cy="7" r="4" />
+                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                  </svg>
+                </span>
+                <span class="nav-link-title">
+                  个人信息
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+    <!-- 右侧内容区域 -->
+    <div class="content new_content">
+      <!-- 顶部导航栏nav -->
+      <div class="mb-3">
+        <header class="d-none d-lg-block navbar navbar-expand-md navbar-dark d-print-none">
+          <div class="container-xl">
+
+            <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+              <a href="." class="mine_a">
+                员工端
+              </a>
+            </h1>
+            <div class="navbar-nav flex-row order-md-last">
+              <div class="nav-item dropdown d-none d-md-flex me-3">
+                <a href="#" class="nav-link px-0" data-bs-toggle="dropdown" tabindex="-1"
+                  aria-label="Show notifications">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
+                    <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
+                  </svg>
+                  <span class="badge bg-red"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-card">
+                  <div class="card">
+                    <div class="card-body">
+                      通知测试
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="nav-item dropdown">
+                <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown"
+                  aria-label="Open user menu">
+
+                  <!-- 头像 -->
+                  <span class="avatar avatar-sm" style="background-image: url(./static/avatars/052.jpg)"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                  <a href="#" class="dropdown-item">反馈</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#" class="dropdown-item">设置</a>
+                  <a href="./staff_sign-in.html" class="dropdown-item">登出</a>
+                </div>
+              </div>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-menu">
+
+            </div>
+          </div>
+        </header>
+      </div>
+      <!-- ！！！！！！！！！！！end -->
+
+      <div class="container-xl">
+        <!-- Page title -->
+
+
+        <div class="row row-cards">
+          <div class="col-12">
+            <form action="https://httpbin.org/post" method="POST" class="card">
+              <div class="card-header">
+                <h4 class="card-titlw card-titlw-index">个人信息</h4>
+              </div>
+
+              <div class="card-body" id="self_id">
+                <div class="row">
+                  <div class="col-xl-4">
+                    <div class="row">
+
+                      <div class="mb-3">
+                        <label class="form-label required">姓名</label>
+                        <input type="text" class="form-control" autocomplete="off" value="DC" disabled />
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label required">身份证号</label>
+                        <input type="text" class="form-control" autocomplete="off" value="XXX" disabled />
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label required">性别</label>
+                        <input type="email" class="form-control" autocomplete="off" value="0" disabled />
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">婚姻</label>
+                        <input type="tel" class="form-control" autocomplete="off" value="0" />
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="col-xl-4">
+
+                    <div class="row">
+
+                      <div class="mb-3">
+                        <label class="form-label required">手机号</label>
+                        <input type="text" class="form-control" autocomplete="off" value="123456789" />
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label required">毕业院校</label>
+                        <input type="text" class="form-control" autocomplete="off" value="HDU" />
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label required">所学专业</label>
+                        <input type="email" class="form-control" autocomplete="off" value="计算机专业" />
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">学历</label>
+                        <input type="tel" class="form-control" autocomplete="off" value="幼儿园" />
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="col-xl-4 row-cards">
+
+                    <div class="col-md-6 col-lg-3 col-lg-3_new">
+                      <div class="card">
+                        <div class="card-body p-4 text-center">
+                          <span class="avatar avatar-xl mb-3 avatar-rounded">JO</span>
+                          <h3 class="m-0 mb-1"><a href="#">Joker</a></h3>
+                          <div class="text-muted">前端小哥</div>
+                          <div class="mt-3">
+                            <span class="badge bg-purple-lt">Worker</span>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card-footer text-end">
+                <div class="d-flex">
+                  <!-- <button type="submit" class="btn btn-primary ms-auto">修改</button> -->
+                  <input type="button" class="btn btn-primary ms-auto" id="change_btn" value="修改">
+                  <input type="button" class="btn btn-primary ms-auto" id="save_btn" value="保存" style="display: none;">
+                </div>
+
+              </div>
+
+              <div class="card-header" style="border-top:2px solid #ccc">
+                <h4 class="card-titlw card-titlw-index">工作信息</h4>
+              </div>
+
+              <div class="card-body" id="work_id">
+                <div class="row">
+
+                  <div class="col-xl-4">
+                    <div class="row">
+                      <div class="mb-3">
+                        <label class="form-label required">部门</label>
+                        <input type="text" id="department" class="form-control" autocomplete="off" value="前端部" />
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label required">部门号</label>
+                        <input type="text" class="form-control" autocomplete="off" value="111111" />
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label required">就职岗位</label>
+                        <input type="email" class="form-control" autocomplete="off" value="主管" />
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label required">就职时间</label>
+                        <input type="tel" id="work_time" class="form-control" autocomplete="off" value="2019/04/01" />
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-xl-4">
+                    <div class="row">
+                      <div class="mb-3">
+                        <label class="form-label required">员工号</label>
+                        <input type="text" class="form-control" autocomplete="off" value="131421" />
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label ">薪酬情况</label>
+                        <input type="text" class="form-control" autocomplete="off" value="20000" />
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label ">出勤率</label>
+                        <input type="email" class="form-control" autocomplete="off" value="98%" />
+                      </div>
+                      <div class="mb-3">
+                        <label class="form-label">建档人</label>
+                        <input type="tel" class="form-control" autocomplete="off" value="BOSS" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+
+      <footer class="footer footer-transparent d-print-none">
+        <div class="container">
+          <div class="row text-center align-items-center flex-row-reverse">
+            <div class="col-lg-auto ms-lg-auto">
+              <ul class="list-inline list-inline-dots mb-0">
+                <li class="list-inline-item"><a href="#" class="link-secondary">Documentation</a></li>
+                <li class="list-inline-item"><a href="#" class="link-secondary">License</a></li>
+                <li class="list-inline-item"><a href="https://github.com/LittleDC/Outsourcing" target="_blank"
+                    class="link-secondary" rel="noopener">Source
+                    code</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-lg-auto mt-3 mt-lg-0">
+              <ul class="list-inline list-inline-dots mb-0">
+                <li class="list-inline-item">
+                  Copyright &copy; 2021
+                  <a href="#" class="link-secondary">Tabler</a>.
+                  All rights reserved.
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-secondary" rel="noopener">v1.0.0-beta</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+
+  </div>
+  </div>
+
+  <!-- Libs JS -->
+  <scrip src="./dist/libs/apexcharts/dist/apexcharts.min.js"></scrip>
+  <!-- Tabler Core -->
+  <scrip src="./dist/js/tabler.min.js"></scrip>
+  <!-- <scrip src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></scrip> -->
+  <!-- <scrip src="https://cdn.bootcss.com/Mock.js/1.0.0/mock-min.js"></scrip> -->
+  <script src="./js/mock.js"></script>
+  <script src="./js/jquery.js"></script>
+  <script src="./mock/profile.js"></script>
+
+  <!-- 修改保存按钮 -->
+  <script>
+    // 禁用修改
+    $(".form-control").each(function (index, domEle) {
+      domEle.disabled = true
+    })
+
+    // 解锁
+    $("#change_btn").click(function () {
+      // console.log($(".form-control"));
+      // console.log($(this))
+
+      $("#self_id .form-control").each(function (index, domEle) {
+        // console.log(domEle);
+        domEle.disabled = false
+      })
+
+      $("#save_btn").css("display", "block")
+      $(this).css("display", "none")
+    })
+
+    $("#save_btn").click(function () {
+      // console.log("this save button");
+      $("#self_id .form-control").each(function (index, domEle) {
+        // console.log(domEle);
+        domEle.disabled = true
+      })
+      $(this).css("display", "none")
+      $("#change_btn").css("display", "block")
+
+
+      ///////// 以下接口操作//////////
+      var id_key2 = [
+        "StaffName", "StaffIdentityCard", "StaffSexuality", "StaffMarry", "StaffPhone", "StaffSchool", "StaffMajor", "StaffEducation",
+      ]
+      // var id_key3 = ["StaffPhoto", "StaffSertification", "StaffCharacter", "StaffExperience"]
+      var idData = new FormData()
+      // idData.append('StaffName', $("#self_id .form-control")[0].value)
+      $.each(id_key2, function (index, element) {
+        // console.log(element, index);
+        // console.log($("#self_id .form-control")[index]);
+        idData.append(element, ($("#self_id .form-control")[index]).value)
+        // console.log("test:" + idData.get(element));
+      })
+      // $.each(id_key3, function (index, element) {
+      //   idData.append(element, "")
+      //   console.log("test:" + idData.get(element));
+      // })
+
+      var username = localStorage.getItem("username")
+
+      // 修改个人信息
+      $.ajax({
+        type: "put",
+        processData: false,
+        contentType: false,
+        url: "http://101.200.144.61:8080/profiles/" + username,
+        data: idData,
+        success: function (data) {
+          if (data.status == 1) {
+            alert(data.msg)
+            // console.log("change information success");
+          } else {
+            alert(data.msg)
+          }
+        },
+        error: function (data) {
+          alert(data.msg)
+        }
+      })
+
+      /*//修改工作信息
+      var work_key2 = [
+        "CompanyId", "DeptId", "WorkPost", "WorkInTime", "StaffId", "WorkSalary", "WorkAttendance", "CreaterName"
+      ]
+      var token = localStorage.getItem("token")
+ 
+      var workData = new FormData()
+      // $.each(work_key2, function (index, element) {
+      //   workData.append(element, ($("#work_id .form-control")[index]).value)
+      // })
+      workData.append("CompanyId", ($("#work_id .form-control")[0]).value)
+      // workData.append("Authorization", token)
+      console.log(workData.get("CompanyId"));
+ 
+      $.ajax({
+        type: "POST",
+        processData: false,
+        contentType: false,
+        url: "http://101.200.144.61:8080/work/" + username,
+        headers: { "Authorization": token },
+        data: workData,
+        success: function (data) {
+          if (data.status == 1) {
+            alert(data.msg)
+            console.log("change work info success");
+            console.log(data);
+          } else {
+            // alert(data.msg)
+            alert("error1")
+            console.log(data);
+ 
+          }
+        },
+      })*/
+    })
+  </script>
+
+  <!-- 同步个人信息 -->
+
+  <script>
+    var id_key = [
+      "staff_name", "staff_identity_card", "staff_sex", "staff_marry", "staff_phone", "staff_school", "staff_major", "staff_education", "staff_photo", "staff_sertification", "staff_character", "staff_experience"
+    ]
+    var work_key = [
+      "company_id", "dept_id", "work_post", "work_in_time", "staff_id", "work_salary", "work_attendance", "creater_name"
+    ]
+
+    // console.log(id_key);
+    window.onload = function () {
+      var username = localStorage.getItem("username")
+      // console.log(username);
+      // console.log($("#self_id .form-control"))
+      $.ajax({
+        type: "GET",
+        url: "http://101.200.144.61:8080/profiles/" + username,
+        // url: '/profiles/19858190000',
+        //将返回的数据解析成json
+        dataType: "json",
+        success: function (data) {
+          // console.log(data.data);
+          // console.log(data.data[id_key[0]]);
+          $("#self_id .form-control").each(function (index, domEle) {
+            domEle.value = data.data[id_key[index]]
+            // console.log(domEle);
+          })
+          // console.log("get information success");
+        },
+      })
+
+      var token = localStorage.getItem("token")
+      var tokenData = new FormData()
+      tokenData.append("Authorization", token)
+      // console.log("get work token:" + tokenData.get("Authorization"));
+
+      $.ajax({
+        type: "GET",
+        // processData: false,
+        // contentType: false,
+        url: "http://101.200.144.61:8080/work/" + username,//13777123456
+        // data: tokenData,
+        // dataType: "json",
+        beforeSend: function (request) {
+          request.setRequestHeader("Authorization", token);
+        },
+
+        success: function (data) {
+          console.log("get work information");
+          console.log(data.data);
+          $("#work_id .form-control").each(function (index, domEle) {
+            domEle.value = data.data[work_key[index]]
+          })
+          console.log("get work info success");
+          $("#work_time")[0].value = $("#work_time")[0].value.substr(0, 10)
+          // console.log($("#work_time")[0])
+        },
+        error: function () {
+          console.log("get work info error");
+        }
+      })
+    }
+  </script>
+
+</body>
+
+</html>

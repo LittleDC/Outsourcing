@@ -1,0 +1,785 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>工作信息 - 人才管理系统 - 微小企业的得力助手.</title>
+  <!-- CSS files -->
+  <link href="./dist/css/tabler.min.css" rel="stylesheet" />
+  <link href="./dist/css/tabler-flags.min.css" rel="stylesheet" />
+  <link href="./dist/css/tabler-payments.min.css" rel="stylesheet" />
+  <link href="./dist/css/tabler-vendors.min.css" rel="stylesheet" />
+  <link href="./dist/css/demo.min.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="./favicon.ico">
+
+  <link rel="stylesheet" href="./css/common.css">
+</head>
+
+<body class="antialiased">
+  <div class="page">
+
+    <!-- ！！！！！！！！！！！begin -->
+    <!-- 侧边导航栏 -->
+    <aside class="navbar navbar-vertical navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <h1 class="navbar-brand navbar-brand-autodark">
+
+          <a href="./index.html">
+            <img src="./static/logo-white.svg" width="110" height="32" alt="Tabler" class="navbar-brand-image">
+            <!-- <h1>人才管理系统</h1> -->
+          </a>
+        </h1>
+
+        <!-- 移动端导航栏 -->
+        <div class="navbar-nav flex-row d-lg-none">
+          <div class="nav-item dropdown d-none d-md-flex me-3">
+            <a href="#" class="nav-link px-0" data-bs-toggle="dropdown" tabindex="-1" aria-label="Show notifications">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
+                <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
+              </svg>
+              <span class="badge bg-red"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end dropdown-menu-card">
+              <div class="card">
+                <div class="card-body">
+                  通知测试2
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown"
+              aria-label="Open user menu">
+
+              <!-- 头像 -->
+              <span class="avatar avatar-sm" style="background-image: url(./static/avatars/052.jpg)"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+
+              <a href="#" class="dropdown-item">反馈</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">设置</a>
+              <a href="./staff_sign-in.html" class="dropdown-item">登出</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-menu">
+          <ul class="navbar-nav pt-lg-3 mine_ul_right">
+
+            <!-- evaluate绩效查看 -->
+            <li class="nav-item">
+              <a class="nav-link" href="./staff_evaluate.html">
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <circle cx="15" cy="15" r="3" />
+                    <path d="M13 17.5v4.5l2 -1.5l2 1.5v-4.5" />
+                    <path d="M10 19h-5a2 2 0 0 1 -2 -2v-10c0 -1.1 .9 -2 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -1 1.73" />
+                    <line x1="6" y1="9" x2="18" y2="9" />
+                    <line x1="6" y1="12" x2="9" y2="12" />
+                    <line x1="6" y1="15" x2="8" y2="15" />
+                  </svg>
+                </span>
+                <span class="nav-link-title">
+                  工作情况
+                </span>
+              </a>
+            </li>
+
+            <!-- profile个人信息查看 -->
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="./staff_index.html">
+                <span class="nav-link-icon d-md-none d-lg-inline-block">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <circle cx="12" cy="7" r="4" />
+                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                  </svg>
+                </span>
+                <span class="nav-link-title">
+                  个人信息
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+    <!-- 右侧内容区域 -->
+    <div class="content new_content">
+      <!-- 顶部导航栏nav -->
+      <div class="mb-3">
+        <header class="d-none d-lg-block navbar navbar-expand-md navbar-dark d-print-none">
+          <div class="container-xl">
+
+            <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
+              <a href="." class="mine_a">
+                员工端
+              </a>
+            </h1>
+            <div class="navbar-nav flex-row order-md-last">
+              <div class="nav-item dropdown d-none d-md-flex me-3">
+                <a href="#" class="nav-link px-0" data-bs-toggle="dropdown" tabindex="-1"
+                  aria-label="Show notifications">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                    stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6" />
+                    <path d="M9 17v1a3 3 0 0 0 6 0v-1" />
+                  </svg>
+                  <span class="badge bg-red"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-card">
+                  <div class="card">
+                    <div class="card-body">
+                      通知测试
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="nav-item dropdown">
+                <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown"
+                  aria-label="Open user menu">
+
+                  <!-- 头像 -->
+                  <span class="avatar avatar-sm" style="background-image: url(./static/avatars/052.jpg)"></span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                  <a href="#" class="dropdown-item">反馈</a>
+                  <div class="dropdown-divider"></div>
+                  <a href="#" class="dropdown-item">设置</a>
+                  <a href="./staff_sign-in.html" class="dropdown-item">登出</a>
+                </div>
+              </div>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-menu">
+
+            </div>
+          </div>
+        </header>
+      </div>
+      <!-- ！！！！！！！！！！！end -->
+
+
+      <div class="container-xl">
+        <!-- Page title -->
+        <div class="row row-cards">
+
+          <!-- 出勤情况 -->
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">出勤情况</h3>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-vcenter card-table table-striped">
+                  <thead>
+                    <tr>
+                      <th>序号</th>
+                      <th>档案号</th>
+                      <th>日期</th>
+                      <th>出勤</th>
+                      <th class="w-1"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>004</td>
+                      <td class="text-muted">
+                        123459
+                      </td>
+                      <td class="text-muted">
+                        <a href="#" class="text-reset">2021/04/09</a>
+                      </td>
+                      <td class="text-muted">
+                        <span class="badge bg-success me-1"></span></span>出勤
+                      </td>
+                      <td>
+                        <div class="btn-list flex-nowrap">
+                          <a href="#" class="btn btn-white">
+                            反馈有误
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>003</td>
+                      <td class="text-muted">
+                        123458
+                      </td>
+                      <td class="text-muted">
+                        <a href="#" class="text-reset">2021/04/08</a>
+                      </td>
+                      <td class="text-muted">
+                        <span class="badge bg-warning me-1"></span></span>迟到
+                      </td>
+                      <td>
+                        <div class="btn-list flex-nowrap">
+                          <a href="#" class="btn btn-white">
+                            反馈有误
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>002</td>
+                      <td class="text-muted">
+                        123457
+                      </td>
+                      <td class="text-muted">
+                        <a href="#" class="text-reset">2021/04/07</a>
+                      </td>
+                      <td class="text-muted">
+                        <span class="badge bg-danger me-1"></span></span>缺勤
+                      </td>
+                      <td>
+                        <div class="btn-list flex-nowrap">
+                          <a href="#" class="btn btn-white">
+                            反馈有误
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>001</td>
+                      <td class="text-muted">
+                        123456
+                      </td>
+                      <td class="text-muted">
+                        <a href="#" class="text-reset">2021/04/06</a>
+                      </td>
+                      <td class="text-muted">
+                        <span class="badge bg-success me-1"></span>出勤
+                      </td>
+                      <td>
+                        <div class="btn-list flex-nowrap">
+                          <a href="#" class="btn btn-white">
+                            反馈有误
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-footer d-flex align-items-center">
+                <ul class="pagination m-0 ms-auto">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <polyline points="15 6 9 12 15 18"></polyline>
+                      </svg>
+                      prev
+                    </a>
+                  </li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item "><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">
+                      next <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <polyline points="9 6 15 12 9 18"></polyline>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 违纪情况 -->
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">违纪情况</h3>
+              </div>
+
+              <div class="table-responsive">
+                <table class="table card-table table-vcenter text-nowrap datatable">
+                  <thead>
+                    <tr>
+                      <th class="w-1">No. <svg xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-sm text-dark icon-thick" width="24" height="24" viewBox="0 0 24 24"
+                          stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                          stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                          <polyline points="6 15 12 9 18 15"></polyline>
+                        </svg>
+                      </th>
+                      <th>档案号</th>
+                      <th>姓名</th>
+                      <th>创建人</th>
+
+                      <th>创建时间</th>
+                      <th>违纪类型</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span class="text-muted" style="padding-right: 1.5rem;">001401</span>
+                      </td>
+                      <td>
+                        87956630
+                      </td>
+                      <td><a href="#" class="text-reset" tabindex="-1">DC</a></td>
+                      <td>
+                        Jone
+                      </td>
+
+                      <td>
+                        2021/04/07
+                      </td>
+                      <td>
+                        <span class="badge bg-secondary me-1"></span> 缺勤
+                      </td>
+                      <td>
+                        <div class="btn-list flex-nowrap" style="float:right">
+                          <a href="#" class="btn btn-white">
+                            详情
+                          </a>
+                          <a href="#" class="btn btn-white">
+                            反馈有误
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td><span class="text-muted" style="padding-right: 1.5rem;">001400</span>
+                      </td>
+                      <td>
+                        87956621
+                      </td>
+                      <td><a href="#" class="text-reset" tabindex="-1">DC</a></td>
+                      <td>
+                        Mike
+                      </td>
+
+                      <td>
+                        2021/04/02
+                      </td>
+                      <td>
+                        <span class="badge bg-danger me-1"></span> 意外泄密
+                      </td>
+                      <td>
+                        <div class="btn-list flex-nowrap" style="float:right">
+                          <a href="#" class="btn btn-white">
+                            详情
+                          </a>
+                          <a href="#" class="btn btn-white">
+                            反馈有误
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td><span class="text-muted" style="padding-right: 1.5rem;">001399</span>
+                      </td>
+                      <td>
+                        87956618
+                      </td>
+                      <td><a href="#" class="text-reset" tabindex="-1">DC</a></td>
+                      <td>
+                        Jone
+                      </td>
+
+                      <td>
+                        2021/03/27
+                      </td>
+                      <td>
+                        <span class="badge bg-secondary me-1"></span> 缺勤
+                      </td>
+                      <td>
+                        <div class="btn-list flex-nowrap" style="float:right">
+                          <a href="#" class="btn btn-white">
+                            详情
+                          </a>
+                          <a href="#" class="btn btn-white">
+                            反馈有误
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- 绩效表格 -->
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">绩效</h3>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-vcenter card-table">
+                  <thead>
+                    <tr>
+                      <th>序号</th>
+                      <th>档案号</th>
+                      <th>时间</th>
+                      <th>绩效</th>
+                      <th class="w-1"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-muted"> 003 </td>
+                      <td> 012345 </td>
+                      <td>
+                        <div>2021/04/06</div>
+                      </td>
+                      <td>
+                        <div>90</div>
+                      </td>
+                      <td>
+                        <div class="btn-list flex-nowrap">
+                          <a href="#" class="btn btn-white">
+                            反馈有误
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="text-muted"> 002 </td>
+                      <td> 012343 </td>
+                      <td>
+                        <div>2021/04/05</div>
+                      </td>
+                      <td>
+                        <div>87</div>
+                      </td>
+                      <td>
+                        <div class="btn-list flex-nowrap">
+                          <a href="#" class="btn btn-white">
+                            反馈有误
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td class="text-muted"> 001 </td>
+                      <td> 012340 </td>
+                      <td>
+                        <div>2021/04/03</div>
+                      </td>
+                      <td>
+                        <div>93</div>
+                      </td>
+                      <td>
+                        <div class="btn-list flex-nowrap">
+                          <a href="#" class="btn btn-white">
+                            反馈有误
+                          </a>
+                        </div>
+                      </td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+              <div class="card-footer d-flex align-items-center">
+                <ul class="pagination m-0 ms-auto">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <polyline points="15 6 9 12 15 18"></polyline>
+                      </svg>
+                      prev
+                    </a>
+                  </li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item "><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li class="page-item"><a class="page-link" href="#">5</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">
+                      next <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24"
+                        viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <polyline points="9 6 15 12 9 18"></polyline>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 图表 -->
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header border-0">
+                <div class="card-title">绩效发展速览</div>
+              </div>
+              <div class="position-relative">
+
+                <div id="chart-development-activity" style="min-height: 192px;">
+                  <div id="apexchartssn2cauyxf" class="apexcharts-canvas apexchartssn2cauyxf apexcharts-theme-light"
+                    style="width: 626px; height: 192px;"><svg id="SvgjsSvg2262" width="626" height="192"
+                      xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                      xmlns:svgjs="http://svgjs.com/svgjs" class="apexcharts-svg" xmlns:data="ApexChartsNS"
+                      transform="translate(0, 0)" style="background: transparent;">
+                      <g id="SvgjsG2264" class="apexcharts-inner apexcharts-graphical" transform="translate(0, 0)">
+                        <defs id="SvgjsDefs2263">
+                          <clipPath id="gridRectMasksn2cauyxf">
+                            <rect id="SvgjsRect2300" width="632" height="194" x="-3" y="-1" rx="0" ry="0" opacity="1"
+                              stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fff"></rect>
+                          </clipPath>
+                          <clipPath id="gridRectMarkerMasksn2cauyxf">
+                            <rect id="SvgjsRect2301" width="630" height="196" x="-2" y="-2" rx="0" ry="0" opacity="1"
+                              stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fff"></rect>
+                          </clipPath>
+                        </defs>
+                        <line id="SvgjsLine2269" x1="-0.5" y1="0" x2="-0.5" y2="192" stroke="#b6b6b6"
+                          stroke-dasharray="3" class="apexcharts-xcrosshairs" x="-0.5" y="0" width="1" height="192"
+                          fill="#b1b9c4" filter="none" fill-opacity="0.9" stroke-width="1"></line>
+                        <g id="SvgjsG2308" class="apexcharts-xaxis" transform="translate(0, 0)">
+                          <g id="SvgjsG2309" class="apexcharts-xaxis-texts-g" transform="translate(0, -4)"></g>
+                        </g>
+                        <g id="SvgjsG2321" class="apexcharts-grid">
+                          <g id="SvgjsG2322" class="apexcharts-gridlines-horizontal" style="display: none;">
+                            <line id="SvgjsLine2324" x1="0" y1="0" x2="626" y2="0" stroke="#e0e0e0" stroke-dasharray="4"
+                              class="apexcharts-gridline"></line>
+                            <line id="SvgjsLine2325" x1="0" y1="48" x2="626" y2="48" stroke="#e0e0e0"
+                              stroke-dasharray="4" class="apexcharts-gridline"></line>
+                            <line id="SvgjsLine2326" x1="0" y1="96" x2="626" y2="96" stroke="#e0e0e0"
+                              stroke-dasharray="4" class="apexcharts-gridline"></line>
+                            <line id="SvgjsLine2327" x1="0" y1="144" x2="626" y2="144" stroke="#e0e0e0"
+                              stroke-dasharray="4" class="apexcharts-gridline"></line>
+                            <line id="SvgjsLine2328" x1="0" y1="192" x2="626" y2="192" stroke="#e0e0e0"
+                              stroke-dasharray="4" class="apexcharts-gridline"></line>
+                          </g>
+                          <g id="SvgjsG2323" class="apexcharts-gridlines-vertical" style="display: none;"></g>
+                          <line id="SvgjsLine2330" x1="0" y1="192" x2="626" y2="192" stroke="transparent"
+                            stroke-dasharray="0">
+                          </line>
+                          <line id="SvgjsLine2329" x1="0" y1="1" x2="0" y2="192" stroke="transparent"
+                            stroke-dasharray="0"></line>
+                        </g>
+                        <g id="SvgjsG2302" class="apexcharts-area-series apexcharts-plot-series">
+                          <g id="SvgjsG2303" class="apexcharts-series" seriesName="Purchases" data:longestSeries="true"
+                            rel="1" data:realIndex="0">
+                            <path id="SvgjsPath2306"
+                              d="M 0 192L 0 184.8C 7.555172413793103 184.8 14.03103448275862 180 21.586206896551722 180C 29.141379310344824 180 35.61724137931034 182.4 43.172413793103445 182.4C 50.72758620689655 182.4 57.20344827586207 177.6 64.75862068965517 177.6C 72.31379310344828 177.6 78.78965517241379 175.2 86.34482758620689 175.2C 93.89999999999999 175.2 100.37586206896552 180 107.93103448275862 180C 115.48620689655172 180 121.96206896551725 177.6 129.51724137931035 177.6C 137.07241379310344 177.6 143.54827586206898 172.8 151.10344827586206 172.8C 158.65862068965515 172.8 165.1344827586207 134.4 172.68965517241378 134.4C 180.24482758620687 134.4 186.7206896551724 175.2 194.2758620689655 175.2C 201.8310344827586 175.2 208.30689655172412 163.2 215.86206896551724 163.2C 223.41724137931033 163.2 229.89310344827587 180 237.44827586206895 180C 245.00344827586207 180 251.47931034482758 177.6 259.0344827586207 177.6C 266.5896551724138 177.6 273.06551724137927 184.8 280.6206896551724 184.8C 288.1758620689655 184.8 294.651724137931 172.8 302.2068965517241 172.8C 309.76206896551724 172.8 316.23793103448276 182.4 323.7931034482759 182.4C 331.348275862069 182.4 337.82413793103444 158.4 345.37931034482756 158.4C 352.9344827586207 158.4 359.4103448275862 120 366.9655172413793 120C 374.5206896551724 120 380.9965517241379 151.2 388.551724137931 151.2C 396.1068965517241 151.2 402.5827586206896 146.4 410.13793103448273 146.4C 417.69310344827585 146.4 424.16896551724136 156 431.7241379310345 156C 439.2793103448276 156 445.75517241379305 158.4 453.31034482758616 158.4C 460.8655172413793 158.4 467.3413793103448 132 474.8965517241379 132C 482.451724137931 132 488.92758620689654 115.2 496.48275862068965 115.2C 504.03793103448277 115.2 510.5137931034483 96 518.0689655172414 96C 525.6241379310345 96 532.0999999999999 60 539.655172413793 60C 547.2103448275861 60 553.6862068965517 48 561.2413793103448 48C 568.7965517241379 48 575.2724137931034 76.80000000000001 582.8275862068965 76.80000000000001C 590.3827586206896 76.80000000000001 596.8586206896551 67.2 604.4137931034483 67.2C 611.9689655172414 67.2 618.4448275862069 24 626 24C 626 24 626 24 626 192M 626 24z"
+                              fill="rgba(32,107,196,0.16)" fill-opacity="1" stroke-opacity="1" stroke-linecap="round"
+                              stroke-width="0" stroke-dasharray="0" class="apexcharts-area" index="0"
+                              clip-path="url(#gridRectMasksn2cauyxf)"
+                              pathTo="M 0 192L 0 184.8C 7.555172413793103 184.8 14.03103448275862 180 21.586206896551722 180C 29.141379310344824 180 35.61724137931034 182.4 43.172413793103445 182.4C 50.72758620689655 182.4 57.20344827586207 177.6 64.75862068965517 177.6C 72.31379310344828 177.6 78.78965517241379 175.2 86.34482758620689 175.2C 93.89999999999999 175.2 100.37586206896552 180 107.93103448275862 180C 115.48620689655172 180 121.96206896551725 177.6 129.51724137931035 177.6C 137.07241379310344 177.6 143.54827586206898 172.8 151.10344827586206 172.8C 158.65862068965515 172.8 165.1344827586207 134.4 172.68965517241378 134.4C 180.24482758620687 134.4 186.7206896551724 175.2 194.2758620689655 175.2C 201.8310344827586 175.2 208.30689655172412 163.2 215.86206896551724 163.2C 223.41724137931033 163.2 229.89310344827587 180 237.44827586206895 180C 245.00344827586207 180 251.47931034482758 177.6 259.0344827586207 177.6C 266.5896551724138 177.6 273.06551724137927 184.8 280.6206896551724 184.8C 288.1758620689655 184.8 294.651724137931 172.8 302.2068965517241 172.8C 309.76206896551724 172.8 316.23793103448276 182.4 323.7931034482759 182.4C 331.348275862069 182.4 337.82413793103444 158.4 345.37931034482756 158.4C 352.9344827586207 158.4 359.4103448275862 120 366.9655172413793 120C 374.5206896551724 120 380.9965517241379 151.2 388.551724137931 151.2C 396.1068965517241 151.2 402.5827586206896 146.4 410.13793103448273 146.4C 417.69310344827585 146.4 424.16896551724136 156 431.7241379310345 156C 439.2793103448276 156 445.75517241379305 158.4 453.31034482758616 158.4C 460.8655172413793 158.4 467.3413793103448 132 474.8965517241379 132C 482.451724137931 132 488.92758620689654 115.2 496.48275862068965 115.2C 504.03793103448277 115.2 510.5137931034483 96 518.0689655172414 96C 525.6241379310345 96 532.0999999999999 60 539.655172413793 60C 547.2103448275861 60 553.6862068965517 48 561.2413793103448 48C 568.7965517241379 48 575.2724137931034 76.80000000000001 582.8275862068965 76.80000000000001C 590.3827586206896 76.80000000000001 596.8586206896551 67.2 604.4137931034483 67.2C 611.9689655172414 67.2 618.4448275862069 24 626 24C 626 24 626 24 626 192M 626 24z"
+                              pathFrom="M -1 192L -1 192L 21.586206896551722 192L 43.172413793103445 192L 64.75862068965517 192L 86.34482758620689 192L 107.93103448275862 192L 129.51724137931035 192L 151.10344827586206 192L 172.68965517241378 192L 194.2758620689655 192L 215.86206896551724 192L 237.44827586206895 192L 259.0344827586207 192L 280.6206896551724 192L 302.2068965517241 192L 323.7931034482759 192L 345.37931034482756 192L 366.9655172413793 192L 388.551724137931 192L 410.13793103448273 192L 431.7241379310345 192L 453.31034482758616 192L 474.8965517241379 192L 496.48275862068965 192L 518.0689655172414 192L 539.655172413793 192L 561.2413793103448 192L 582.8275862068965 192L 604.4137931034483 192L 626 192">
+                            </path>
+                            <path id="SvgjsPath2307"
+                              d="M 0 184.8C 7.555172413793103 184.8 14.03103448275862 180 21.586206896551722 180C 29.141379310344824 180 35.61724137931034 182.4 43.172413793103445 182.4C 50.72758620689655 182.4 57.20344827586207 177.6 64.75862068965517 177.6C 72.31379310344828 177.6 78.78965517241379 175.2 86.34482758620689 175.2C 93.89999999999999 175.2 100.37586206896552 180 107.93103448275862 180C 115.48620689655172 180 121.96206896551725 177.6 129.51724137931035 177.6C 137.07241379310344 177.6 143.54827586206898 172.8 151.10344827586206 172.8C 158.65862068965515 172.8 165.1344827586207 134.4 172.68965517241378 134.4C 180.24482758620687 134.4 186.7206896551724 175.2 194.2758620689655 175.2C 201.8310344827586 175.2 208.30689655172412 163.2 215.86206896551724 163.2C 223.41724137931033 163.2 229.89310344827587 180 237.44827586206895 180C 245.00344827586207 180 251.47931034482758 177.6 259.0344827586207 177.6C 266.5896551724138 177.6 273.06551724137927 184.8 280.6206896551724 184.8C 288.1758620689655 184.8 294.651724137931 172.8 302.2068965517241 172.8C 309.76206896551724 172.8 316.23793103448276 182.4 323.7931034482759 182.4C 331.348275862069 182.4 337.82413793103444 158.4 345.37931034482756 158.4C 352.9344827586207 158.4 359.4103448275862 120 366.9655172413793 120C 374.5206896551724 120 380.9965517241379 151.2 388.551724137931 151.2C 396.1068965517241 151.2 402.5827586206896 146.4 410.13793103448273 146.4C 417.69310344827585 146.4 424.16896551724136 156 431.7241379310345 156C 439.2793103448276 156 445.75517241379305 158.4 453.31034482758616 158.4C 460.8655172413793 158.4 467.3413793103448 132 474.8965517241379 132C 482.451724137931 132 488.92758620689654 115.2 496.48275862068965 115.2C 504.03793103448277 115.2 510.5137931034483 96 518.0689655172414 96C 525.6241379310345 96 532.0999999999999 60 539.655172413793 60C 547.2103448275861 60 553.6862068965517 48 561.2413793103448 48C 568.7965517241379 48 575.2724137931034 76.80000000000001 582.8275862068965 76.80000000000001C 590.3827586206896 76.80000000000001 596.8586206896551 67.2 604.4137931034483 67.2C 611.9689655172414 67.2 618.4448275862069 24 626 24"
+                              fill="none" fill-opacity="1" stroke="#206bc4" stroke-opacity="1" stroke-linecap="round"
+                              stroke-width="2" stroke-dasharray="0" class="apexcharts-area" index="0"
+                              clip-path="url(#gridRectMasksn2cauyxf)"
+                              pathTo="M 0 184.8C 7.555172413793103 184.8 14.03103448275862 180 21.586206896551722 180C 29.141379310344824 180 35.61724137931034 182.4 43.172413793103445 182.4C 50.72758620689655 182.4 57.20344827586207 177.6 64.75862068965517 177.6C 72.31379310344828 177.6 78.78965517241379 175.2 86.34482758620689 175.2C 93.89999999999999 175.2 100.37586206896552 180 107.93103448275862 180C 115.48620689655172 180 121.96206896551725 177.6 129.51724137931035 177.6C 137.07241379310344 177.6 143.54827586206898 172.8 151.10344827586206 172.8C 158.65862068965515 172.8 165.1344827586207 134.4 172.68965517241378 134.4C 180.24482758620687 134.4 186.7206896551724 175.2 194.2758620689655 175.2C 201.8310344827586 175.2 208.30689655172412 163.2 215.86206896551724 163.2C 223.41724137931033 163.2 229.89310344827587 180 237.44827586206895 180C 245.00344827586207 180 251.47931034482758 177.6 259.0344827586207 177.6C 266.5896551724138 177.6 273.06551724137927 184.8 280.6206896551724 184.8C 288.1758620689655 184.8 294.651724137931 172.8 302.2068965517241 172.8C 309.76206896551724 172.8 316.23793103448276 182.4 323.7931034482759 182.4C 331.348275862069 182.4 337.82413793103444 158.4 345.37931034482756 158.4C 352.9344827586207 158.4 359.4103448275862 120 366.9655172413793 120C 374.5206896551724 120 380.9965517241379 151.2 388.551724137931 151.2C 396.1068965517241 151.2 402.5827586206896 146.4 410.13793103448273 146.4C 417.69310344827585 146.4 424.16896551724136 156 431.7241379310345 156C 439.2793103448276 156 445.75517241379305 158.4 453.31034482758616 158.4C 460.8655172413793 158.4 467.3413793103448 132 474.8965517241379 132C 482.451724137931 132 488.92758620689654 115.2 496.48275862068965 115.2C 504.03793103448277 115.2 510.5137931034483 96 518.0689655172414 96C 525.6241379310345 96 532.0999999999999 60 539.655172413793 60C 547.2103448275861 60 553.6862068965517 48 561.2413793103448 48C 568.7965517241379 48 575.2724137931034 76.80000000000001 582.8275862068965 76.80000000000001C 590.3827586206896 76.80000000000001 596.8586206896551 67.2 604.4137931034483 67.2C 611.9689655172414 67.2 618.4448275862069 24 626 24"
+                              pathFrom="M -1 192L -1 192L 21.586206896551722 192L 43.172413793103445 192L 64.75862068965517 192L 86.34482758620689 192L 107.93103448275862 192L 129.51724137931035 192L 151.10344827586206 192L 172.68965517241378 192L 194.2758620689655 192L 215.86206896551724 192L 237.44827586206895 192L 259.0344827586207 192L 280.6206896551724 192L 302.2068965517241 192L 323.7931034482759 192L 345.37931034482756 192L 366.9655172413793 192L 388.551724137931 192L 410.13793103448273 192L 431.7241379310345 192L 453.31034482758616 192L 474.8965517241379 192L 496.48275862068965 192L 518.0689655172414 192L 539.655172413793 192L 561.2413793103448 192L 582.8275862068965 192L 604.4137931034483 192L 626 192">
+                            </path>
+                            <g id="SvgjsG2304" class="apexcharts-series-markers-wrap" data:realIndex="0">
+                              <g class="apexcharts-series-markers">
+                                <circle id="SvgjsCircle2336" r="0" cx="0" cy="184.8"
+                                  class="apexcharts-marker wkyqj911a no-pointer-events" stroke="#ffffff" fill="#206bc4"
+                                  fill-opacity="1" stroke-width="2" stroke-opacity="0.9" default-marker-size="0">
+                                </circle>
+                              </g>
+                            </g>
+                          </g>
+                          <g id="SvgjsG2305" class="apexcharts-datalabels" data:realIndex="0">
+                          </g>
+                        </g>
+                        <line id="SvgjsLine2331" x1="0" y1="0" x2="626" y2="0" stroke="#b6b6b6" stroke-dasharray="0"
+                          stroke-width="1" class="apexcharts-ycrosshairs"></line>
+                        <line id="SvgjsLine2332" x1="0" y1="0" x2="626" y2="0" stroke-dasharray="0" stroke-width="0"
+                          class="apexcharts-ycrosshairs-hidden"></line>
+                        <g id="SvgjsG2333" class="apexcharts-yaxis-annotations"></g>
+                        <g id="SvgjsG2334" class="apexcharts-xaxis-annotations"></g>
+                        <g id="SvgjsG2335" class="apexcharts-point-annotations"></g>
+                      </g>
+                      <rect id="SvgjsRect2268" width="0" height="0" x="0" y="0" rx="0" ry="0" opacity="1"
+                        stroke-width="0" stroke="none" stroke-dasharray="0" fill="#fefefe"></rect>
+                      <g id="SvgjsG2320" class="apexcharts-yaxis" rel="0" transform="translate(-18, 0)"></g>
+                      <g id="SvgjsG2265" class="apexcharts-annotations"></g>
+                    </svg>
+                    <div class="apexcharts-legend" style="max-height: 96px;"></div>
+                    <div class="apexcharts-tooltip apexcharts-theme-light" style="left: 11px; top: 147px;">
+                      <div class="apexcharts-tooltip-title" style="font-family: inherit; font-size: 12px;">20 Jun</div>
+                      <div class="apexcharts-tooltip-series-group apexcharts-active" style="order: 1; display: flex;">
+                        <span class="apexcharts-tooltip-marker" style="background-color: rgb(32, 107, 196);"></span>
+                        <div class="apexcharts-tooltip-text" style="font-family: inherit; font-size: 12px;">
+                          <div class="apexcharts-tooltip-y-group"><span class="apexcharts-tooltip-text-label">Purchases:
+                            </span><span class="apexcharts-tooltip-text-value">3</span>
+                          </div>
+                          <div class="apexcharts-tooltip-z-group"><span
+                              class="apexcharts-tooltip-text-z-label"></span><span
+                              class="apexcharts-tooltip-text-z-value"></span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="apexcharts-yaxistooltip apexcharts-yaxistooltip-0 apexcharts-yaxistooltip-left apexcharts-theme-light">
+                      <div class="apexcharts-yaxistooltip-text"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="resize-triggers">
+                  <div class="expand-trigger">
+                    <div style="width: 627px; height: 193px;"></div>
+                  </div>
+                  <div class="contract-trigger"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+      <footer class="footer footer-transparent d-print-none">
+        <div class="container">
+          <div class="row text-center align-items-center flex-row-reverse">
+            <div class="col-lg-auto ms-lg-auto">
+              <ul class="list-inline list-inline-dots mb-0">
+                <li class="list-inline-item"><a href="#" class="link-secondary">Documentation</a></li>
+                <li class="list-inline-item"><a href="#" class="link-secondary">License</a></li>
+                <li class="list-inline-item"><a href="https://github.com/LittleDC/Outsourcing" target="_blank"
+                    class="link-secondary" rel="noopener">Source
+                    code</a></li>
+              </ul>
+            </div>
+            <div class="col-12 col-lg-auto mt-3 mt-lg-0">
+              <ul class="list-inline list-inline-dots mb-0">
+                <li class="list-inline-item">
+                  Copyright &copy; 2021
+                  <a href="#" class="link-secondary">Tabler</a>.
+                  All rights reserved.
+                </li>
+                <li class="list-inline-item">
+                  <a href="#" class="link-secondary" rel="noopener">v1.0.0-beta</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+
+  </div>
+  </div>
+
+  <!-- Libs JS -->
+  <script src="./dist/libs/apexcharts/dist/apexcharts.min.js"></script>
+  <!-- Tabler Core -->
+  <script src="./dist/js/tabler.min.js"></script>
+
+  <script>
+    // @formatter:off
+    document.addEventListener("DOMContentLoaded", function () {
+      window.ApexCharts && (new ApexCharts(document.getElementById('chart-development-activity'), {
+        chart: {
+          type: "area",
+          fontFamily: 'inherit',
+          height: 260,
+          sparkline: {
+            enabled: true
+          },
+          animations: {
+            enabled: false
+          },
+        },
+        dataLabels: {
+          enabled: false,
+        },
+        fill: {
+          opacity: .16,
+          type: 'solid'
+        },
+        stroke: {
+          width: 2,
+          lineCap: "round",
+          curve: "smooth",
+        },
+        series: [{
+          name: "绩效",
+          data: [0, 85, 84, 86, 87, 85, 86, 88, 94, 87, 82, 85, 86, 83, 88, 84, 84, 80, 87, 89, 85, 84, 85, 82, 80, 85, 80, 88, 80, 100]
+        }],
+        grid: {
+          strokeDashArray: 4,
+        },
+        xaxis: {
+          labels: {
+            padding: 0
+          },
+          tooltip: {
+            enabled: false
+          },
+          axisBorder: {
+            show: false,
+          },
+          type: 'datetime',
+        },
+        yaxis: {
+          labels: {
+            padding: 4
+          },
+        },
+        labels: [
+          '2020-06-20', '2020-06-21', '2020-06-22', '2020-06-23', '2020-06-24', '2020-06-25', '2020-06-26', '2020-06-27', '2020-06-28', '2020-06-29', '2020-06-30', '2020-07-01', '2020-07-02', '2020-07-03', '2020-07-04', '2020-07-05', '2020-07-06', '2020-07-07', '2020-07-08', '2020-07-09', '2020-07-10', '2020-07-11', '2020-07-12', '2020-07-13', '2020-07-14', '2020-07-15', '2020-07-16', '2020-07-17', '2020-07-18', '2020-07-19'
+        ],
+        colors: ["#206bc4"],
+        legend: {
+          show: false,
+        },
+        point: {
+          show: false
+        },
+      })).render();
+    });
+      // @formatter:on
+
+  </script>
+
+
+</body>
+
+</html>
